@@ -46,6 +46,44 @@
   text-align: center!important;
 }
 
+.arrowButton{
+  width: 70px;
+  height:70px;
+  border-radius: 100px;
+  margin:5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  background-color: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  cursor: pointer;
+}
+
+
+.arrowButton2{
+  width: 70px;
+  height:70px;
+  border-radius: 100px;
+  margin:5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  background-color: white;
+  border:1px solid black;
+  cursor: pointer;
+}
+
+.arrowButton2:hover{
+  transform: scale(1.1);
+}
+.arrowButton:hover{
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+}
+
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

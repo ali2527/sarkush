@@ -1,4 +1,4 @@
-import { Col,Typography, Layout, Row, List, Input, Button } from "antd";
+import { Col, Image, Typography, Layout, Row, List, Input, Button } from "antd";
 import {
   BiLogoLinkedin,
   BiLogoTwitter,
@@ -6,271 +6,370 @@ import {
   BiLogoInstagram,
 } from "react-icons/bi";
 import { useNavigate } from "react-router";
+import { BsArrowRightShort, BsArrowLeft, BsArrowUp } from "react-icons/bs";
 
 const { Footer } = Layout;
 const { TextArea } = Input;
 
 const ClientFooter = () => {
-  const navigate = useNavigate
+  const navigate = useNavigate;
   return (
-    <Footer className="footer" style={{ height: "auto", padding: "0" }}>
+    <Footer
+      className="footer"
+      style={{ height: "auto", padding: "0", background: "white" }}
+    >
       <Row
         style={{
           justifyContent: "center",
           padding: "0 10px",
         }}
       >
-        <Col xs={24} md={20}>
+        <Col xs={24} md={22} style={{ borderTop: "1px solid #868686" }}>
           <Row style={{ justifyContent: "center" }}>
             <Col
               xs={24}
-              md={10}
+              md={5}
               style={{ padding: "30px 0", fontFamily: "Lato" }}
               className={"footer-column"}
             >
-              <Row>
-                <Col xs={24} md={18}>
-                  <div style={{ padding: "10px 30px 0px 10px" }}>
-                    <Typography.Title
-                      className="fontFamily1"
-                      style={{ color: "white", fontSize: 30 }}
-                    >
-                      About
-                    </Typography.Title>
-                    <Typography.Text
-                      className="fontFamily1"
-                      style={{ color: "white", fontSize: 16 }}
-                    >
-                      We're a passionate group of educators working together to
-                      create the best online learning experiences for K-12 and
-                      adult learners like you.
-                    </Typography.Text>
-                    <br />
-                    <br />
-                    <Row>
-                      <Col xs={6} lg={3}>
-                        <BiLogoLinkedin
-                          style={{
-                            color: "white",
-                            fontSize: 25,
-                            cursor: "pointer",
-                          }}
-                        />
-                      </Col>
-                      <Col xs={6} lg={3}>
-                        <BiLogoTwitter
-                          style={{
-                            color: "white",
-                            fontSize: 25,
-                            cursor: "pointer",
-                          }}
-                        />
-                      </Col>
-                      <Col xs={6} lg={3}>
-                        <BiLogoYoutube
-                          style={{
-                            color: "white",
-                            fontSize: 25,
-                            cursor: "pointer",
-                          }}
-                        />
-                      </Col>
-                      <Col xs={6} lg={3}>
-                        <BiLogoInstagram
-                          style={{
-                            color: "white",
-                            fontSize: 25,
-                            cursor: "pointer",
-                          }}
-                        />
-                      </Col>
-                    </Row>
-                    <br />
-                    <Row>
-                      <Button
-                        style={{
-                          marginTop: "10px",
-                          padding: "0px 30px",
-                          cursor: "pointer",
-                        }}
-                        onClick={()=> navigate("/signup")}
-                        ghost
-                        size="large"
-                      >
-                        Register Now
-                      </Button>
-                      &emsp;
-                      <Button
-                        style={{
-                          marginTop: "10px",
-                          padding: "0px 30px",
-                          cursor: "pointer",
-                        }}
-                        ghost
-                        size="large"
-                      >
-                        Apply Now
-                      </Button>
-                    </Row>
-                  </div>
+              <Row
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Col span={4}>
+                  <Image
+                    preview={false}
+                    alt={"Failed to load image"}
+                    height={70}
+                    src="/images/logo.png"
+                    style={{ maxWidth: 200 }}
+                    onClick={() => navigate("/")}
+                  />
+                </Col>
+                <Col span={20}>
+                  <Typography.Text
+                    className="fontFamily1 "
+                    style={{
+                      fontSize: "16px",
+                      color: "#424242",
+                      textAlign: "left",
+                      display: "inline-flex",
+                    }}
+                  >
+                    Fueling Your Startup's Success with Innovative Digital
+                    Marketing and Design Solutions
+                  </Typography.Text>
                 </Col>
               </Row>
             </Col>
-            <Col
-              xs={24}
-              md={6}
-              style={{ padding: "30px 0", fontFamily: "Lato" }}
-              className={"footer-column"}
-            >
-              <div style={{ padding: "10px 30px 0px 10px" }}>
-                <Typography.Title
-                  className="fontFamily1"
-                  style={{ color: "white", fontSize: 30 }}
-                >
-                  Services
-                </Typography.Title>
-                <Typography.Text
-                  className="fontFamily1"
-                  style={{
-                    color: "white",
-                    fontSize: 18,
-                    textDecoration: "underline",
-                  }}
-                >
-                  Tutoring
-                </Typography.Text>
-                <List
-                  className="footer-list"
-                  size="small"
-                  style={{ fontSize: 18 }}
-                >
-                  <List.Item key="elementary_tutoring" className="footerLink">
-                    Elementary Tutoring
-                  </List.Item>
-                  <List.Item
-                    key="middle_school_tutoring"
-                    className="footerLink"
-                  >
-                    Middle School Tutoring
-                  </List.Item>
-                  <List.Item key="high_school_tutoring" className="footerLink">
-                    High School Tutoring
-                  </List.Item>
-                  <List.Item key="adult_tutoring" className="footerLink">
-                    Adult Tutoring
-                  </List.Item>
-                </List>
-                <br />
 
-                <Typography.Text
-                  className="fontFamily1"
-                  style={{
-                    color: "white",
-                    fontSize: 18,
-                    textDecoration: "underline",
-                  }}
-                >
-                  Coaching
-                </Typography.Text>
-                <List
-                  className="footer-list"
-                  size="small"
-                  style={{ fontSize: 18 }}
-                >
-                  <List.Item key="academic_coaching" className="footerLink">
-                    Academic Coaching
-                  </List.Item>
-                  <List.Item key="career_coaching" className="footerLink">
-                    Career Coaching
-                  </List.Item>
-                  <List.Item key="mindset_coaching" className="footerLink">
-                    Mindset Coaching
-                  </List.Item>
-                  <List.Item key="conflict_coaching" className="footerLink">
-                    Conflict Coaching
-                  </List.Item>
-                  <List.Item
-                    key="goal_achievement_coaching"
-                    className="footerLink"
-                  >
-                    Goal Achievement Coaching
-                  </List.Item>
-                  <List.Item key="focus_coaching" className="footerLink">
-                    Focus Coaching
-                  </List.Item>
-                </List>
-              </div>
-            </Col>
             <Col
               xs={24}
-              md={6}
-              style={{ padding: "30px 0", fontFamily: "Lato" }}
+              md={4}
+              style={{
+                padding: "30px 0",
+                fontFamily: "Lato",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
               className={"footer-column"}
             >
-              <div style={{ padding: "10px 30px 0px 10px" }}>
-                <Typography.Title
-                  className="fontFamily1"
-                  style={{ color: "white", fontSize: 30 }}
+              <Row
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Typography.Text
+                  className="fontFamily1 "
+                  style={{
+                    fontSize: "12px",
+                    color: "#424242",
+                    textAlign: "left",
+                    display: "inline-flex",
+                    marginBottom: "10px",
+                  }}
                 >
-                  Navigation
-                </Typography.Title>
-                <List
-                  className="footer-list"
-                  size="small"
-                  style={{ fontSize: 18 }}
+                  INSTAGRAM
+                </Typography.Text>
+              </Row>
+
+              <Row
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Typography.Text
+                  className="fontFamily1 "
+                  style={{
+                    fontSize: "12px",
+                    color: "#424242",
+                    textAlign: "left",
+                    display: "inline-flex",
+                  }}
                 >
-                  <List.Item key="home" className="footerLink">
-                    Home
-                  </List.Item>
-                  <List.Item key="about" className="footerLink">
-                    About
-                  </List.Item>
-                  <List.Item key="services" className="footerLink">
-                    Services
-                  </List.Item>
-                  <List.Item key="book_online" className="footerLink">
-                    Book Online
-                  </List.Item>
-                  <List.Item key="contact_us" className="footerLink">
-                    Contact Us
-                  </List.Item>
-                </List>
-                <br />
-              </div>
+                  LINKDLIN
+                </Typography.Text>
+              </Row>
+            </Col>
+
+            <Col
+              xs={24}
+              md={4}
+              style={{
+                padding: "30px 0",
+                fontFamily: "Lato",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+              className={"footer-column"}
+            >
+              <Row
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Typography.Text
+                  className="fontFamily1 "
+                  style={{
+                    fontSize: "12px",
+                    color: "#424242",
+                    textAlign: "left",
+                    display: "inline-flex",
+                    marginBottom: "10px",
+                  }}
+                  onClick={() => navigate("/")}
+                >
+                  HOME
+                </Typography.Text>
+              </Row>
+
+              <Row
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Typography.Text
+                  className="fontFamily1 "
+                  style={{
+                    fontSize: "12px",
+                    color: "#424242",
+                    textAlign: "left",
+                    display: "inline-flex",
+                  }}
+                  onClick={() => navigate("/about-us")}
+                >
+                  ABOUT US
+                </Typography.Text>
+              </Row>
+            </Col>
+
+            <Col
+              xs={24}
+              md={4}
+              style={{
+                padding: "30px 0",
+                fontFamily: "Lato",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+              className={"footer-column"}
+            >
+              <Row
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Typography.Text
+                  className="fontFamily1 "
+                  style={{
+                    fontSize: "12px",
+                    color: "#424242",
+                    textAlign: "left",
+                    display: "inline-flex",
+                    marginBottom: "10px",
+                  }}
+                  onClick={() => navigate("/blog")}
+                >
+                  BLOG
+                </Typography.Text>
+              </Row>
+
+              <Row
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Typography.Text
+                  className="fontFamily1 "
+                  style={{
+                    fontSize: "12px",
+                    color: "#424242",
+                    textAlign: "left",
+                    display: "inline-flex",
+                  }}
+                  onClick={() => navigate("/contact-us")}
+                >
+                  CONNECT WITH US
+                </Typography.Text>
+              </Row>
+            </Col>
+
+            <Col
+              xs={24}
+              md={5}
+              style={{
+                padding: "30px 0",
+                fontFamily: "Lato",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+              className={"footer-column"}
+            >
+              <Row
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Col>
+                  <Typography.Text
+                    className="fontFamily1 "
+                    style={{
+                      fontSize: "14px",
+                      color: "#424242",
+                      textAlign: "left",
+                      display: "inline-flex",
+                      textTransform: "uppercase",
+                    }}
+                  >
+                    3166 Massachusetts Avenue, Washington DC
+                    <br />
+                    letsconnect@surkush.com
+                    <br />
+                    +330146272235
+                  </Typography.Text>
+                </Col>
+              </Row>
             </Col>
           </Row>
         </Col>
       </Row>
       <Row
         style={{
-          alignItems: "center",
           justifyContent: "center",
-          padding: "10px",
+          padding: "0 10px",
         }}
       >
-        <Col xs={24} md={18}>
-          <Row>
-            <Col xs={24} md={14}>
-              <p className="footerLink">
-                All Rights Reserved. Proudly Designed by{" "}
-                <a style={{ color: "white", textDecoration: "underline" }}>
-                  stategix design
-                </a>
-              </p>
-            </Col>
-            <Col xs={24} md={10}>
-              <div
+        <Col xs={24} md={22}>
+          <Row style={{ justifyContent: "flex-end" }}>
+            <Col
+              xs={0}
+              md={10}
+              style={{ padding: "30px 0", fontFamily: "Lato" }}
+              className={"footer-column"}
+            />
+
+            <Col
+              xs={24}
+              md={4}
+              style={{
+                padding: "30px 0",
+                fontFamily: "Lato",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+              className={"footer-column"}
+            >
+              <Row
                 style={{
                   display: "flex",
-                  alignItems: "flex-end",
-                  justifyContent: "flex-end",
-                  placeContent: "center",
+                  justifyContent: "center",
+                  alignItems: "center",
                 }}
               >
-                <p className="footerLink">Terms & Conditions</p>
-                &emsp;
-                <p className="footerLink">Privacy Policy</p>
-              </div>
+                <div
+                  className="arrowButton2"
+                  onClick={() =>
+                    window.scrollTo({
+                      top: 0,
+                      behavior: "smooth", // You can use 'auto' for instant scrolling
+                    })
+                  }
+                >
+                  <BsArrowUp />
+                </div>
+              </Row>
+            </Col>
+            <Col
+              xs={24}
+              md={10}
+              style={{
+                padding: "30px 0",
+                fontFamily: "Lato",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "flex-end",
+                alignItems: "flex-end",
+              }}
+              className={"footer-column"}
+            >
+              <Row
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Typography.Text
+                  className="fontFamily1 "
+                  style={{
+                    fontSize: "14px",
+                    color: "#424242",
+                    textAlign: "left",
+                    display: "inline-flex",
+                  }}
+                >
+                  CONTACT
+                </Typography.Text>
+                &emsp;&emsp;&emsp;
+                <Typography.Text
+                  className="fontFamily1 "
+                  style={{
+                    fontSize: "14px",
+                    color: "#424242",
+                    textAlign: "left",
+                    display: "inline-flex",
+                  }}
+                >
+                  LEGAL
+                </Typography.Text>
+              </Row>
             </Col>
           </Row>
         </Col>

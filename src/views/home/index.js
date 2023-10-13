@@ -1,10 +1,29 @@
-import React from "react";
+import React, { useRef } from 'react';
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
 import MainButton from "../../components/MainButton";
 import { Col, Row, Image, Typography, Layout, Avatar } from "antd";
-import { BsArrowRightShort, BsArrowDownRight } from "react-icons/bs";
+import { BsArrowRightShort, BsArrowLeft ,BsArrowRight } from "react-icons/bs";
 import { FiArrowDownRight } from "react-icons/fi";
 
 function Home() {
+  const carousel = useRef() 
+  const items = [
+    <div className="item" data-value="1">1</div>,
+    <div className="item" data-value="2">2</div>,
+    <div className="item" data-value="3">3</div>,
+    <div className="item" data-value="4">4</div>,
+    <div className="item" data-value="5">5</div>,
+];
+
+
+const responsive = {
+  0: { items: 1 },
+  568: { items: 2 },
+  1024: { items: 2 },
+};
+
+
   return (
     <Layout style={{ minHeight: "100vh" }}>
       <Row
@@ -744,157 +763,102 @@ function Home() {
            
           </Row>
           <br />
-          <Row gutter={50}>
-          <Col xs={24} lg={4} style={{display:'flex',alignItems:'flex-start', justifyContent:'center',flexDirection:'column'}}>
+  
+          <Row gutter={0}>
+          <Col xs={24} lg={3} style={{display:'flex',alignItems:'flex-start', justifyContent:'center',flexDirection:'column'}}>
               
               <Row style={{ padding: "20px 10px 0 10px" }}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="92" height="92" viewBox="0 0 92 92" fill="none">
-  <g filter="url(#filter0_d_102_183)">
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M46 78C27.2247 78 12 62.779 12 44C12 25.2247 27.2247 10 46 10C64.7754 10 80 25.2247 80 44C80 62.779 64.7754 78 46 78Z" fill="white"/>
-  </g>
-  <path d="M43.5236 55.8651C44.1283 56.4877 45.1268 56.4909 45.7355 55.8723C46.325 55.2732 46.3281 54.313 45.7425 53.7101L37.862 45.596H59.404C60.2855 45.596 61 44.8814 61 44C61 43.1186 60.2855 42.404 59.404 42.404H37.862L45.74 34.3182C46.3278 33.7148 46.3286 32.7532 45.7417 32.1489C45.1308 31.5199 44.1209 31.5199 43.51 32.1489L32.6767 43.3033C32.2998 43.6913 32.2998 44.3087 32.6767 44.6967L43.5236 55.8651Z" fill="#868686"/>
-  <defs>
-    <filter id="filter0_d_102_183" x="0" y="0" width="92" height="92" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-      <feOffset dy="2"/>
-      <feGaussianBlur stdDeviation="6"/>
-      <feComposite in2="hardAlpha" operator="out"/>
-      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
-      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_102_183"/>
-      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_102_183" result="shape"/>
-    </filter>
-  </defs>
-</svg>
+                <div className="arrowButton"  onClick={(e) => carousel?.current?.slideNext(e)}>
+                <BsArrowRight />
+                </div>
+             
               </Row>
               <Row style={{ padding: "0 10px 0 10px" }}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="92" height="92" viewBox="0 0 92 92" fill="none">
-  <g filter="url(#filter0_d_102_180)">
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M46 78C64.7753 78 80 62.779 80 44C80 25.2247 64.7753 10 46 10C27.2246 10 12 25.2247 12 44C12 62.779 27.2246 78 46 78Z" fill="white"/>
-  </g>
-  <path d="M48.4764 55.8651C47.8717 56.4877 46.8732 56.4909 46.2645 55.8723C45.675 55.2732 45.6719 54.313 46.2575 53.7101L54.138 45.596H32.596C31.7145 45.596 31 44.8814 31 44C31 43.1186 31.7145 42.404 32.596 42.404H54.138L46.26 34.3182C45.6722 33.7148 45.6714 32.7532 46.2583 32.1489C46.8692 31.5199 47.8791 31.5199 48.49 32.1489L59.3233 43.3033C59.7002 43.6913 59.7002 44.3087 59.3233 44.6967L48.4764 55.8651Z" fill="#222222"/>
-  <defs>
-    <filter id="filter0_d_102_180" x="0" y="0" width="92" height="92" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-      <feOffset dy="2"/>
-      <feGaussianBlur stdDeviation="6"/>
-      <feComposite in2="hardAlpha" operator="out"/>
-      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
-      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_102_180"/>
-      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_102_180" result="shape"/>
-    </filter>
-  </defs>
-</svg>
+              <div className="arrowButton" onClick={(e) => carousel?.current?.slidePrev(e)}>
+                <BsArrowLeft/>
+                </div>
               </Row>
              
             </Col>
-            <Col xs={24} lg={10}>
-              <Row>
-                <Image
-                  preview={false}
-                  alt={"Failed to load image"}
-                  style={{
-                    border: "1px solid #f2f2f2",
-                    borderRadius: "50px",
+            <Col xs={24} lg={21}>
+            <AliceCarousel
+      key="carousel"
+      mouseTracking
+      disableDotsControls
+      disableButtonsControls
+      responsive={responsive}
+      items={items}
+      ref={carousel}
+    >
+      {items.map((subItem,subIndex) => {
+        return(<div style={{padding:'20px'}}>
+         <Row  style={{
+                    border: "1px solid #868686",
+                    borderRadius: "32px",
                     height: "400px",
                     width: "100%",
                     objectFit: "cover",
-                  }}
-                  src="/images/blog1.png"
-                  width={"100%"}
-                />
-              </Row>
-              <Row style={{ padding: "20px 10px 0 10px" }}>
-                <Typography.Text
-                  className="fontFamily1 textCenter"
-                  style={{
-                    fontSize: "18px",
-                    color: "#19A882",
-                    textAlign: "center",
-                  }}
-                >
-                  Health-tech
-                </Typography.Text>
-              </Row>
-              <Row style={{ padding: "0 10px 0 10px" }}>
-                <Typography.Title
-                  className="fontFamily2 textCenter"
-                  style={{
-                    fontSize: "30px",
-                    color: "black",
-                    textAlign: "center",
-                  }}
-                >
-                  UI/UX Case study: Unwind - Mindfulness App
-                </Typography.Title>
-              </Row>
-              <Row style={{ padding: "0 10px 0 10px" }}>
-                <Typography.Text
-                  className="fontFamily1 textCenter"
-                  style={{
-                    fontSize: "16px",
-                    color: "#424242",
-                    textAlign: "center",
-                  }}
-                >
-                  #Health &nbsp; #Tech
-                </Typography.Text>
-              </Row>
+                    padding:"40px"
+                  }}>
+                    <Col>
+               <Typography.Text
+              className="fontFamily2 "
+              style={{
+                fontSize: "18px",
+                color: "#424242",
+                textAlign: "left",
+                color:'#424242'
+
+              }}
+            >
+            Surkush’s team did a fantastic job on my branding! He took what was a rather vague description of my new agency and helped me develop a logo, name, color scheme and visual language and helped really bring out the best aspects of my company as a brand. He's got great communication skills, goes over and above to deliver and is very receptive to feedback. I completely recommend working with him!"
+
+            </Typography.Text>
+            
+            
+            <hr style={{margin:"40px 0"}} />
+       
+
+            <Row gutter={10} style={{ display: "flex", alignItems: "center" }}>
+            <Col>
+              <Avatar size={50} src={"/images/author2.png"} />
             </Col>
-            <Col xs={24} lg={10}>
-              <Row>
-                <Image
-                  preview={false}
-                  alt={"Failed to load image"}
-                  width={"100%"}
-                  src="/images/blog2.png"
-                  style={{
-                    border: "1px solid #f2f2f2",
-                    borderRadius: "50px",
-                    height: "400px",
-                    width: "100%",
-                    objectFit: "cover",
-                  }}
-                />
-              </Row>
-              <Row style={{ padding: "20px 10px 0 10px" }}>
-                <Typography.Text
-                  className="fontFamily1 textCenter"
-                  style={{
-                    fontSize: "18px",
-                    color: "#19A882",
-                    textAlign: "center",
-                  }}
-                >
-                  Fitness
-                </Typography.Text>
-              </Row>
-              <Row style={{ padding: "0 10px 0 10px" }}>
-                <Typography.Title
-                  className="fontFamily2 textCenter"
-                  style={{
-                    fontSize: "30px",
-                    color: "black",
-                    textAlign: "center",
-                  }}
-                >
-                  Branding: Fitness brand
-                </Typography.Title>
-              </Row>
-              <Row style={{ padding: "0 10px 0 10px" }}>
-                <Typography.Text
-                  className="fontFamily1 textCenter"
-                  style={{
-                    fontSize: "16px",
-                    color: "#424242",
-                    textAlign: "center",
-                  }}
-                >
-                  #Fitness &nbsp; #Branding &nbsp; #Health
-                </Typography.Text>
-              </Row>
+            <Col>
+              <Typography.Title
+                className="fontFamily1 "
+                style={{
+                  fontSize: "16px",
+                  color: "#424242",
+                  textAlign: "left",
+                  margin: 5,
+                }}
+              >
+               Client Name
+              </Typography.Title>
+              <Typography.Text
+                className="fontFamily1 "
+                style={{
+                  fontSize: "12px",
+                  color: "#6D6E73",
+                  textAlign: "left",
+                  margin: 5,
+                }}
+              >
+                Position, Business name
+              </Typography.Text>
             </Col>
+          </Row>
+            </Col>
+              </Row>
+            
+            
+        </div>)
+      })}
+
+    </AliceCarousel>
+
+            </Col>
+          
           </Row>
         </Col>
       </Row>
