@@ -1,6 +1,7 @@
 {
   "name": "sarkush",
   "version": "0.1.0",
+  "homepage": "https://surkush.com/",
   "private": true,
   "dependencies": {
     "@react-spring/parallax": "^9.7.3",

@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.header-menu-mobile .ant-menu-item-selected{
+  background-color: transparent!important;
+  color:#c9ebf9!important;
+}
+
+
+@media only screen and (max-width: 600px) {
+ 
+  .hide-on-phone{
+    display: none!important;
+  }
+  .display-on-phone{
+    display: flex!important;
+  }
+  }
+  
+  

@@ -38,22 +38,23 @@ function ContactUs() {
       <Row
         className="hero"
         style={{
-          height: "100vh",
+          minHeight:  window.innerWidth < 800 ? "50vh" : "100vh",
           background:'white',
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
           position: "relative",
           textAlign: "left",
+          padding:"50px 0"
         }}
       >
-        <Col xs={24} lg={20} style={{display:'flex',flexDirection:'column',justifyContent:'space-around',height:'100%'}}>
+        <Col xs={20} lg={20} style={{display:'flex',flexDirection:'column',justifyContent:'space-between',height:'100%'}}>
           <div>
-          <Row style={{ textAlign: "center" }}>
+          <Row style={{ textAlign: "left" }}>
             <Typography.Title
-              className="fontFamily2 textCenter"
+              className="fontFamily2 "
               style={{
-                fontSize: "56px",
+                fontSize:  window.innerWidth < 800 ? "25px" : "56px",
                 color: "#222",
                 fontStyle: "normal",
                 fontWeight: 700,
@@ -69,9 +70,9 @@ function ContactUs() {
 
           <Row>
             <Typography.Text
-              className="fontFamily1 textCenter"
+              className="fontFamily1"
               style={{
-                fontSize: "22px",
+                fontSize: "20px",
                 color: "#424242",
                 textAlign: "left",
 
@@ -84,18 +85,21 @@ function ContactUs() {
           </Row>
           </div>
 
-
+<br/><br/>
+<br/><br/>
+          <br/>
+       
           <div>
-          <Row style={{ textAlign: "center" }}>
+          <Row style={{ textAlign: "left" }}>
             <Typography.Title
-              className="fontFamily2 textCenter"
+              className="fontFamily2"
               style={{
-                fontSize: "56px",
+                fontSize:  window.innerWidth < 800 ? "25px" : "56px", 
                 color: "#222",
                 fontStyle: "normal",
                 fontWeight: 600,
                 lineHeight: "68px",
-                marginBottom: 10,
+                marginBottom: 5,
                 zIndex: 2,
                 marginTop: 0,
                 textDecoration:'underline'
@@ -104,13 +108,13 @@ function ContactUs() {
            letsconnect@surkush.com
             </Typography.Title>
           </Row>
-          <br/>
+
 
           <Row>
             <Typography.Text
               className="fontFamily1"
               style={{
-                fontSize: "26px",
+                fontSize:  window.innerWidth < 800 ? "18px" : "26px", 
                 color: "#424242",
                 textAlign: "left",
 
@@ -118,17 +122,25 @@ function ContactUs() {
                 marginTop: 0,
               }}
             >
-             3166 Massachusetts Avenue, <br/>Washington DC
+           
+                    <br />
+                   1007 N ORANGE St. 4th FLOOR SUITE
+                    <br />
+                    #2536, WILMGTON, DELAWARE 19801,
+                    <br/>
+                    UNITED STATES
+                    
             </Typography.Text>
           </Row>
 
           <br/>
+          
 
 <Row>
   <Typography.Text
     className="fontFamily1"
     style={{
-      fontSize: "26px",
+      fontSize: window.innerWidth < 800 ? "18px" : "26px", 
       color: "#424242",
       textAlign: "left",
 
@@ -136,7 +148,7 @@ function ContactUs() {
       marginTop: 0,
     }}
   >
-   Tél : +33 (0) 1 46 27 22 35
+   Tél : (720) 734-7017
   </Typography.Text>
 </Row>
 

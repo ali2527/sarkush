@@ -15,7 +15,7 @@ const ClientLayout = ({ children, head, footer= true }) => {
         setTimeout(() =>{
             setAnimationClass('animate');
         //   setLoading(false)
-      },500)
+      },300)
 
         setTimeout(() =>{
             // setAnimationClass('animate');

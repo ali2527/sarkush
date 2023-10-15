@@ -38,21 +38,23 @@ function AboutUs() {
       <Row
         className="hero"
         style={{
-          height: "90vh",
+          minHeight:  window.innerWidth < 800 ? "50vh" : "90vh",
           background: "#EAF4FF",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
           position: "relative",
           textAlign: "center",
+          padding:"50px 0"
         }}
       >
-        <Col xs={24} lg={12}>
+        <Col xs={20} lg={12}>
           <Row style={{ textAlign: "center", justifyContent: "center" }}>
             <Typography.Title
               className="fontFamily2 textCenter"
               style={{
-                fontSize: "75px",
+                fontSize:  window.innerWidth < 800 ? "35px" : "68px",
+                paddingTop:window.innerWidth < 800 ? "50px" : "0px",
                 color: "#222",
                 fontStyle: "normal",
                 fontWeight: 700,
@@ -87,7 +89,7 @@ function AboutUs() {
           </Row>
         </Col>
 
-        <div style={{ position: "absolute", right: 0, top: 0, zIndex: 0 }}>
+        <div style={{ position: "absolute", right: 0, top: 0, zIndex: 0,display: window.innerWidth < 800 ? "none" : "auto", }}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="1440"
@@ -102,7 +104,7 @@ function AboutUs() {
           </svg>
         </div>
 
-        <div style={{ position: "absolute", left: 0, zIndex: 0 }}>
+        <div style={{ position: "absolute", left: 0, zIndex: 0,display: window.innerWidth < 800 ? "none" : "auto", }}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="377"
@@ -117,7 +119,7 @@ function AboutUs() {
           </svg>
         </div>
 
-        <div style={{ position: "absolute", left: 150, top: 100, zIndex: 0 }}>
+        <div style={{ position: "absolute", left: 150, top: 100, zIndex: 0,display: window.innerWidth < 800 ? "none" : "auto", }}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="501"
@@ -141,14 +143,15 @@ function AboutUs() {
           justifyContent: "center",
           justifyContent: "center",
           alignItems: "center",
-          padding: "100px 0",
+          padding: "50px 0",
         }}
       >
-        <Col xs={24} lg={12} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={12} style={{ textAlign: "center" }}>
           <Typography.Title
             className="fontFamily2 textCenter"
             style={{
-              fontSize: "50px",
+              fontSize:  window.innerWidth < 800 ? "35px" : "50px",
+                paddingTop:window.innerWidth < 800 ? "50px" : "0px",
               fontWeight: "bold",
               color: "#222",
               textAlign: "center",
@@ -181,11 +184,12 @@ function AboutUs() {
           padding: "0px 0 100px",
         }}
       >
-        <Col xs={24} lg={12} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={12} style={{ textAlign: "center" }}>
           <Typography.Title
             className="fontFamily2 textCenter"
             style={{
-              fontSize: "50px",
+              fontSize:  window.innerWidth < 800 ? "35px" : "50px",
+                paddingTop:window.innerWidth < 800 ? "50px" : "0px",
               fontWeight: "bold",
               color: "#222",
               textAlign: "center",
@@ -224,7 +228,7 @@ function AboutUs() {
                 height: "500px",
                 width: "100%",
                 objectFit: "cover",
-                padding: "40px",
+                padding: "35px",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
@@ -287,7 +291,7 @@ function AboutUs() {
                 height: "500px",
                 width: "100%",
                 objectFit: "cover",
-                padding: "40px",
+                padding: "35px",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
@@ -346,7 +350,7 @@ function AboutUs() {
                 height: "500px",
                 width: "100%",
                 objectFit: "cover",
-                padding: "40px",
+                padding: "35px",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
@@ -419,10 +423,10 @@ function AboutUs() {
           justifyContent: "center",
           justifyContent: "center",
           alignItems: "center",
-          padding: "250px 0",
+          padding:window.innerWidth < 800 ? "50px 0" : "250px 0px",
         }}
       >
-        <div style={{position:'absolute'}}>
+        <div style={{position:'absolute',display: window.innerWidth < 800 ? "none" : "auto",}}>
         <svg xmlns="http://www.w3.org/2000/svg" width="717" height="717" viewBox="0 0 717 717" fill="none">
 <path opacity="0.2" d="M106 717C106 379.54 379.592 106 717 106" stroke="#C9EBF9" stroke-width="210.17" stroke-miterlimit="10"/>
 </svg>
@@ -430,11 +434,11 @@ function AboutUs() {
   <path opacity="0.2" d="M611 717C611 379.54 337.408 106 0 106" stroke="#C9EBF9" stroke-width="210.17" stroke-miterlimit="10"/>
 </svg>
         </div>
-        <Col xs={24} lg={12} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={12} style={{ textAlign: "center" }}>
           <Typography.Title
             className="fontFamily2 textCenter"
             style={{
-              fontSize: "50px",
+              fontSize:  window.innerWidth < 800 ? "35px" : "50px",
               fontWeight: "bold",
               color: "#222",
               textAlign: "center",
@@ -464,15 +468,15 @@ function AboutUs() {
           justifyContent: "center",
           justifyContent: "center",
           alignItems: "center",
-          padding: "150px 0 150px",
+          padding: "100px 0 100px",
         }}
       >
         <Col xs={24} lg={20} style={{ textAlign: "center" }}>
           <Typography.Title
             className="fontFamily2 textCenter"
             style={{
-              fontSize: "50px",
-
+              
+              fontSize:  window.innerWidth < 800 ? "35px" : "50px",
               color: "white",
               textAlign: "center",
               margin: 0,
@@ -483,8 +487,8 @@ function AboutUs() {
           <br />
           <br />
           <br />
-          <Col xs={24} lg={24} style={{ textAlign: "center" }}>
-            <Row justify="space-between">
+          <Col xs={24} lg={24} style={{ textAlign: "center",display:window.innerWidth < 800 ? "none" :"auto" }}> 
+            <Row gutter={[30 , 30]} justify="space-between">
               <Col
                 xs={24}
                 lg={6}
@@ -522,66 +526,7 @@ function AboutUs() {
                     & Solve
                   </Typography.Text>
                 </Row>
-                <br />
-                <br />
-                <Row>
-                  <div
-                    style={{ position: "absolute", left: "50%", bottom: "30%",zIndex:2 }}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="282"
-                      height="8"
-                      viewBox="0 0 282 8"
-                      fill="none"
-                    >
-                      <path
-                        d="M281.354 4.35355C281.549 4.15829 281.549 3.84171 281.354 3.64645L278.172 0.464466C277.976 0.269204 277.66 0.269204 277.464 0.464466C277.269 0.659728 277.269 0.976311 277.464 1.17157L280.293 4L277.464 6.82843C277.269 7.02369 277.269 7.34027 277.464 7.53553C277.66 7.7308 277.976 7.7308 278.172 7.53553L281.354 4.35355ZM0 4.5H281V3.5H0V4.5Z"
-                        fill="url(#paint0_linear_91_1381)"
-                      />
-                      <defs>
-                        <linearGradient
-                          id="paint0_linear_91_1381"
-                          x1="308"
-                          y1="4.00059"
-                          x2="-67"
-                          y2="14.0018"
-                          gradientUnits="userSpaceOnUse"
-                        >
-                          <stop stop-color="white" />
-                          <stop offset="1" stop-opacity="0" />
-                        </linearGradient>
-                      </defs>
-                    </svg>
-                  </div>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="188"
-                    height="188"
-                    viewBox="0 0 188 188"
-                    fill="none"
-                  >
-                    <circle
-                      cx="94"
-                      cy="94"
-                      r="93"
-                      fill="#1C2854"
-                      stroke="#FFFBFB"
-                      stroke-width="2"
-                      stroke-dasharray="5 5"
-                    />
-                    <circle
-                      cx="94"
-                      cy="94"
-                      r="10"
-                      fill="#1C2854"
-                      stroke="#D9D9D9"
-                    />
-                    <circle cx="94" cy="94" r="3.5" fill="#D9D9D9" />
-                  </svg>
-
                 
-                </Row>
                 
               
               </Col>
@@ -623,64 +568,7 @@ function AboutUs() {
                     & Build
                   </Typography.Text>
                 </Row>
-                <br />
-                <br />
-                <Row>
-                  <div
-                    style={{ position: "absolute", left: "50%", bottom: "30%",zIndex:2 }}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="282"
-                      height="8"
-                      viewBox="0 0 282 8"
-                      fill="none"
-                    >
-                      <path
-                        d="M281.354 4.35355C281.549 4.15829 281.549 3.84171 281.354 3.64645L278.172 0.464466C277.976 0.269204 277.66 0.269204 277.464 0.464466C277.269 0.659728 277.269 0.976311 277.464 1.17157L280.293 4L277.464 6.82843C277.269 7.02369 277.269 7.34027 277.464 7.53553C277.66 7.7308 277.976 7.7308 278.172 7.53553L281.354 4.35355ZM0 4.5H281V3.5H0V4.5Z"
-                        fill="url(#paint0_linear_91_1381)"
-                      />
-                      <defs>
-                        <linearGradient
-                          id="paint0_linear_91_1381"
-                          x1="308"
-                          y1="4.00059"
-                          x2="-67"
-                          y2="14.0018"
-                          gradientUnits="userSpaceOnUse"
-                        >
-                          <stop stop-color="white" />
-                          <stop offset="1" stop-opacity="0" />
-                        </linearGradient>
-                      </defs>
-                    </svg>
-                  </div>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="188"
-                    height="188"
-                    viewBox="0 0 188 188"
-                    fill="none"
-                  >
-                    <circle
-                      cx="94"
-                      cy="94"
-                      r="93"
-                      fill="#1C2854"
-                      stroke="#FFFBFB"
-                      stroke-width="2"
-                      stroke-dasharray="5 5"
-                    />
-                    <circle
-                      cx="94"
-                      cy="94"
-                      r="10"
-                      fill="#1C2854"
-                      stroke="#D9D9D9"
-                    />
-                    <circle cx="94" cy="94" r="3.5" fill="#D9D9D9" />
-                  </svg>
-                </Row>
+  
               </Col>
 
               <Col
@@ -720,64 +608,7 @@ function AboutUs() {
                     & Test
                   </Typography.Text>
                 </Row>
-                <br />
-                <br />
-                <Row>
-                  <div
-                    style={{ position: "absolute", left: "50%", bottom: "30%",zIndex:2 }}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="282"
-                      height="8"
-                      viewBox="0 0 282 8"
-                      fill="none"
-                    >
-                      <path
-                        d="M281.354 4.35355C281.549 4.15829 281.549 3.84171 281.354 3.64645L278.172 0.464466C277.976 0.269204 277.66 0.269204 277.464 0.464466C277.269 0.659728 277.269 0.976311 277.464 1.17157L280.293 4L277.464 6.82843C277.269 7.02369 277.269 7.34027 277.464 7.53553C277.66 7.7308 277.976 7.7308 278.172 7.53553L281.354 4.35355ZM0 4.5H281V3.5H0V4.5Z"
-                        fill="url(#paint0_linear_91_1381)"
-                      />
-                      <defs>
-                        <linearGradient
-                          id="paint0_linear_91_1381"
-                          x1="308"
-                          y1="4.00059"
-                          x2="-67"
-                          y2="14.0018"
-                          gradientUnits="userSpaceOnUse"
-                        >
-                          <stop stop-color="white" />
-                          <stop offset="1" stop-opacity="0" />
-                        </linearGradient>
-                      </defs>
-                    </svg>
-                  </div>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="188"
-                    height="188"
-                    viewBox="0 0 188 188"
-                    fill="none"
-                  >
-                    <circle
-                      cx="94"
-                      cy="94"
-                      r="93"
-                      fill="#1C2854"
-                      stroke="#FFFBFB"
-                      stroke-width="2"
-                      stroke-dasharray="5 5"
-                    />
-                    <circle
-                      cx="94"
-                      cy="94"
-                      r="10"
-                      fill="#1C2854"
-                      stroke="#D9D9D9"
-                    />
-                    <circle cx="94" cy="94" r="3.5" fill="#D9D9D9" />
-                  </svg>
-                </Row>
+
               </Col>
 
               <Col
@@ -817,37 +648,12 @@ function AboutUs() {
                     Iterate
                   </Typography.Text>
                 </Row>
-                <br />
-                <br />
-                <Row>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="188"
-                    height="188"
-                    viewBox="0 0 188 188"
-                    fill="none"
-                  >
-                    <circle
-                      cx="94"
-                      cy="94"
-                      r="93"
-                      fill="#1C2854"
-                      stroke="#FFFBFB"
-                      stroke-width="2"
-                      stroke-dasharray="5 5"
-                    />
-                    <circle
-                      cx="94"
-                      cy="94"
-                      r="10"
-                      fill="#1C2854"
-                      stroke="#D9D9D9"
-                    />
-                    <circle cx="94" cy="94" r="3.5" fill="#D9D9D9" />
-                  </svg>
-                 
-                </Row>
               </Col>
+            </Row>
+            <Row justify="space-between" style={{padding:"50px"}}>
+              <Image src={"./images/steps.png"} preview={false} />
+              
+
             </Row>
             <Row justify="space-between">
               <Col
@@ -882,12 +688,181 @@ function AboutUs() {
             </Row>
           </Col>
 
+<Row style={{ textAlign: "center",display:window.innerWidth < 800 ? "auto" :"none" }}>
+<Col xs={24} lg={24} > 
+              <Row gutter={[30 , 30]} justify="space-between">
+                <Col
+                  xs={24}
+                  lg={6}
+                  style={{
+                    textAlign: "center",
+                    flexDirection: "column",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <Row>
+                    <Typography.Title
+                      className="fontFamily2 textCenter"
+                      style={{
+                        fontSize: "32px",
+                        color: "white",
+                        textAlign: "center",
+                        margin: 0,
+                      }}
+                    >
+                      Think{" "}
+                    </Typography.Title>
+                  </Row>
+                  <Row>
+                    <Typography.Text
+                      className="fontFamily1 textCenter"
+                      style={{
+                        fontSize: "20px",
+                        color: "white",
+                        textAlign: "center",
+                        margin: 0,
+                      }}
+                    >
+                      & Solve
+                    </Typography.Text>
+                  </Row>
+                  
+                  
+                
+                </Col>
+
+                <Col
+                  xs={24}
+                  lg={6}
+                  style={{
+                    textAlign: "center",
+                    flexDirection: "column",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <Row>
+                    <Typography.Title
+                      className="fontFamily2 textCenter"
+                      style={{
+                        fontSize: "32px",
+                        color: "white",
+                        textAlign: "center",
+                        margin: 0,
+                      }}
+                    >
+                      Design{" "}
+                    </Typography.Title>
+                  </Row>
+                  <Row>
+                    <Typography.Text
+                      className="fontFamily1 textCenter"
+                      style={{
+                        fontSize: "20px",
+                        color: "white",
+                        textAlign: "center",
+                        margin: 0,
+                      }}
+                    >
+                      & Build
+                    </Typography.Text>
+                  </Row>
+    
+                </Col>
+
+                <Col
+                  xs={24}
+                  lg={6}
+                  style={{
+                    textAlign: "center",
+                    flexDirection: "column",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <Row>
+                    <Typography.Title
+                      className="fontFamily2 textCenter"
+                      style={{
+                        fontSize: "32px",
+                        color: "white",
+                        textAlign: "center",
+                        margin: 0,
+                      }}
+                    >
+                      Launch{" "}
+                    </Typography.Title>
+                  </Row>
+                  <Row>
+                    <Typography.Text
+                      className="fontFamily1 textCenter"
+                      style={{
+                        fontSize: "20px",
+                        color: "white",
+                        textAlign: "center",
+                        margin: 0,
+                      }}
+                    >
+                      & Test
+                    </Typography.Text>
+                  </Row>
+
+                </Col>
+
+                <Col
+                  xs={24}
+                  lg={6}
+                  style={{
+                    textAlign: "center",
+                    flexDirection: "column",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <Row>
+                    <Typography.Title
+                      className="fontFamily2 textCenter"
+                      style={{
+                        fontSize: "32px",
+                        color: "white",
+                        textAlign: "center",
+                        margin: 0,
+                      }}
+                    >
+                      Learn{" "}
+                    </Typography.Title>
+                  </Row>
+                  <Row>
+                    <Typography.Text
+                      className="fontFamily1 textCenter"
+                      style={{
+                        fontSize: "20px",
+                        color: "white",
+                        textAlign: "center",
+                        margin: 0,
+                      }}
+                    >
+                      Iterate
+                    </Typography.Text>
+                  </Row>
+                </Col>
+              </Row>
+            </Col>
+           
+</Row>
+         
+
           <br/>
           <br/>
           <br/>
 
           <Row style={{justifyContent:'center'}}>
-            <Col xs={24} md={12}>
+            <Col xs={20} md={12}>
             <Typography.Text
                     className="fontFamily1 textCenter"
                     style={{

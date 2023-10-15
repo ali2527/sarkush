@@ -4,7 +4,7 @@ import { MdMenu } from "react-icons/md";
 import { Layout, Row, Col, Menu, Button, Modal, Drawer, Typography, Alert } from "antd";
 import { useNavigate } from "react-router";
 import MainButton from "../../components/MainButton"
-
+import "../../App.css"
 const { Header } = Layout;
 
 const ClientHeader = () => {
@@ -53,6 +53,7 @@ const ClientHeader = () => {
                 alt={"Failed to load image"}
          
                 height={70}
+                width={35}
                 src="/images/logo.png"
                 style={{ maxWidth: 200 }}
                 onClick={()=> navigate("/")}
@@ -63,12 +64,12 @@ const ClientHeader = () => {
               xs={0}
               md={16}
               style={{
-                display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                display:window.innerWidth < 800 ? "none" : 'flex'
         
               }}
-              className="hide-on-phone"
+              
             >
               <Menu
                 style={{
@@ -101,8 +102,8 @@ const ClientHeader = () => {
             <Col
               xs={18}
               md={4}
-              style={{ textAlign: "right" }}
-              className="site-header-logo"
+              style={{ textAlign: "right", display:window.innerWidth < 800 ? "none" : 'flex' }}
+              className="site-header-logo hide-on-phone"
             >
             <MainButton onClick={() => navigate("/connect-with-us")} className='fontFamily1' style={{background:"#1C2854", border:'none', borderRadius:"100px",padding:"14px 35px",height:"auto", fontSize:"16px"}} size="large">
               Connect with us
@@ -112,13 +113,13 @@ const ClientHeader = () => {
             <Col
               xs={4}
               md={0}
-              style={{ textAlignLast: "right", justifyContent: "right" }}
-              className="display-on-phone"
+              style={{ textAlignLast: "right", alignItems:"center", justifyContent: "right", display:window.innerWidth < 800 ? "flex" : 'none'   }}
+
             >
            
                 
               <MdMenu
-                style={{ fontSize: 26, color: "white" }}
+                style={{ fontSize:50, color: "#1c2854" }}
                 onClick={()=> setVisible(true)}
                 />
          
@@ -133,68 +134,40 @@ const ClientHeader = () => {
         closable={false}
         onClose={() => setVisible(false)}
         visible={visible}
-        style={{backgroundColor:"#264067"}}
+        style={{backgroundColor:"#1c2854"}}
         key={"drawer"}
       >
-         <Image
-                preview={false}
-                alt={"Failed to load image"}
-                width={150}
-                height={80}
-                src="/images/logo-header 1.png"
-                style={{ maxWidth: 200 }}
-              />
-              <br/><br/><br/>
+
         <Menu
           style={{
-            fontSize: 18,
+            fontSize: 24,
             fontWeight: 500,
-            backgroundColor: "#264067",
+            backgroundColor: "#1c2854",
             color:"white"
           }}
           mode="inline"
           className="header-menu-mobile "
         >
-    <Menu.Item key="home" className="hover fontFamily1" >
+     <Menu.Item key="home" style={{padding:"30px 0"}} className="hover"   onClick={()=> {setVisible(false); navigate("/")}}>
                   Home
                 </Menu.Item>
-                <Menu.Item key="about" className="hover fontFamily1">
-                  About
+
+                <Menu.Item key="about" style={{padding:"30px 0"}} className="hover"   onClick={()=>{setVisible(false); navigate("/about-us")}}>
+                  About Us
                 </Menu.Item>
-                <Menu.Item key="contact_us" className="hover fontFamily1">
+               <Menu.Item key="blog" style={{padding:"30px 0"}} className="hover"   onClick={()=> {setVisible(false); navigate("/blog")}}>
+                  Blog
+                </Menu.Item>
+              
+                <Menu.Item key="contact_us" style={{padding:"30px 0"}} className="hover"   onClick={()=> {setVisible(false); navigate("/contact-us")}}>
                   Contact Us
+                </Menu.Item>
+                <Menu.Item key="connect_with_us"  style={{padding:"30px 0"}} className="hover"   onClick={()=> {setVisible(false); navigate("/connect-with-us")}}>
+                  Connect with Us
                 </Menu.Item>
         </Menu>
         <br/><br/>
-        <Row gutter={20}>
-          <Col span={12}>
-          <Button
-          block
-                  style={{
-                    padding: "0px 30px",
-                    cursor: "pointer",
-                  }}
-                  
-                  ghost
-                  size="large"
-                >
-                  Login
-                </Button>
-          </Col>
-          <Col span={12}>
-          <Button
-                  style={{
-                    padding: "0px 30px",
-                    cursor: "pointer",
-                  }}
-                  block
-                  ghost
-                  size="large"
-                >
-                  Register
-                </Button>
-          </Col>
-        </Row>
+       
       </Drawer>
 
 

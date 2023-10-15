@@ -12,7 +12,7 @@ const { Footer } = Layout;
 const { TextArea } = Input;
 
 const ClientFooter = () => {
-  const navigate = useNavigate;
+  const navigate = useNavigate();
   return (
     <Footer
       className="footer"
@@ -24,7 +24,7 @@ const ClientFooter = () => {
           padding: "0 10px",
         }}
       >
-        <Col xs={24} md={22} style={{ borderTop: "1px solid #868686" }}>
+        <Col xs={20} md={22} style={{ borderTop: "1px solid #868686" }}>
           <Row style={{ justifyContent: "center" }}>
             <Col
               xs={24}
@@ -44,6 +44,7 @@ const ClientFooter = () => {
                     preview={false}
                     alt={"Failed to load image"}
                     height={70}
+                    width={35}
                     src="/images/logo.png"
                     style={{ maxWidth: 200 }}
                     onClick={() => navigate("/")}
@@ -53,7 +54,7 @@ const ClientFooter = () => {
                   <Typography.Text
                     className="fontFamily1 "
                     style={{
-                      fontSize: "16px",
+                      fontSize: "14px",
                       color: "#424242",
                       textAlign: "left",
                       display: "inline-flex",
@@ -259,18 +260,22 @@ const ClientFooter = () => {
                   <Typography.Text
                     className="fontFamily1 "
                     style={{
-                      fontSize: "14px",
+                      fontSize: "12px",
                       color: "#424242",
                       textAlign: "left",
                       display: "inline-flex",
-                      textTransform: "uppercase",
+              
                     }}
                   >
-                    3166 Massachusetts Avenue, Washington DC
+                    (720) 734-7017
                     <br />
-                    letsconnect@surkush.com
+                   1007 N Orange St. 4th Floor Suite
                     <br />
-                    +330146272235
+                    #2536, Wilmgton, Delaware 19801,
+                    <br/>
+                    United States
+                    <br />
+                    raamishlutfi@Surkush.com
                   </Typography.Text>
                 </Col>
               </Row>

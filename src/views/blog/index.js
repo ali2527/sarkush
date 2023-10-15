@@ -14,8 +14,10 @@ import {
 } from "antd";
 import { IoIosArrowForward } from "react-icons/io";
 import { FiArrowDownRight } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
 
 function Blogs() {
+  const navigate = useNavigate()
   const onChange = (key) => {
     console.log(key);
   };
@@ -63,7 +65,7 @@ function Blogs() {
           paddingTop: "100px",
         }}
       >
-        <Col xs={24} lg={18}>
+        <Col xs={20} lg={18}>
           <Row
             style={{
               display: "flex",
@@ -113,7 +115,7 @@ function Blogs() {
           justifyContent: "center",
           justifyContent: "center",
           alignItems: "center",
-          padding: "50px 0 100px",
+          padding: "50px 0 50px",
         }}
       >
         <Tabs
@@ -137,7 +139,7 @@ function Blogs() {
           position: "relative",
         }}
       >
-        <Col xs={24} lg={20}>
+        <Col xs={20} lg={20}>
           <Row
             style={{
               border: "1px solid #dadada",
@@ -274,9 +276,12 @@ function Blogs() {
           paddingBottom: "50px",
         }}
       >
-        <Col xs={24} lg={20} style={{ textAlign: "left" }}>
+        <Col xs={20} lg={20} style={{ textAlign: "left" }}>
           <Row gutter={[25,25]}>
-            <Col xs={24} lg={8}>
+            <Col xs={24} lg={8} onClick={() => { window.scrollTo({
+                      top: 0,
+                      behavior: "smooth", // You can use 'auto' for instant scrolling
+                    }); navigate("/blog/5")}}>
               <Row>
                 <Image
                   preview={false}

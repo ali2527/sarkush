@@ -11,18 +11,53 @@ function Home() {
   const carousel = useRef() 
   const navigate = useNavigate()
   const items = [
-    <div className="item" data-value="1">1</div>,
-    <div className="item" data-value="2">2</div>,
-    <div className="item" data-value="3">3</div>,
-    <div className="item" data-value="4">4</div>,
-    <div className="item" data-value="5">5</div>,
-];
+    {
+      "key":1,
+      "author":"Darryl C.",
+      "comment":"The entire process was smooth, and any changes or revisions were revised in a professional and timely manner. Raamish went above and beyondto ensure my needs were met, I would definitely work with him again",
+      "company":"",
+      "position":"Brand Designer",
+      "image":"./images/author2.png"
+    },
+    {
+      "key":2,
+      "author":"Chris J.",
+      "comment":"Raamish and his teamdid a fantastic job on my branding!. He took what was a rather vague description of my agency and helped me develope a logo ,name , color scheme and visual language and reallly helped me bring out the best aspect of my company as a brand. He's got great copmmunication skills, goes over and above to deliever and is veryreceptive to feedback. I completely recommend working with him",
+      "company":"SEO Agency",
+      "position":"Built a brand Identity",
+      "image":"./images/author3.jpg"
+    },
+    {
+      "key":3,
+      "author":"Mustafa K.",
+      "comment":"Raamish and his teamdid a fantastic job on my branding!. He took what was a rather vague description of my agency and helped me develope a logo ,name , color scheme and visual language and reallly helped me bring out the best aspect of my company as a brand.",
+      "company":"SEO Agency",
+      "position":"Built a brand Identity",
+      "image":"./images/author4.jpg"
+    },
+    {
+      "key":4,
+      "author":"Mind Muscle Physique",
+      "comment":"Fluent Communication and was extreamly professional assisted us with completing the job right away. I would definitely recommend him again",
+      "company":"",
+      "position":"",
+      "image":"./images/author5.jpg"
+    },
+    {
+      "key":5,
+      "author":"TeleHealth.",
+      "comment":"Fantastic Counterparty to work with - communicated well and were always their with there responses. They were reseptive to feedback and I was impressed with the high quality work ",
+      "company":"",
+      "position":"",
+      "image":"./images/author6.png"
+    }
+  ];
 
 
 const responsive = {
   0: { items: 1 },
-  568: { items: 2 },
-  1024: { items: 2 },
+  568: { items: 1 },
+  1024: { items: 1 },
 };
 
 
@@ -31,27 +66,29 @@ const responsive = {
       <Row
         className="hero"
         style={{
-          height: "90vh",
+          minHeight:  window.innerWidth < 800 ? "50vh" : "90vh",
           background: "#fff",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
           position: "relative",
+          padding:"50px 0"
         }}
       >
-        <Col xs={24} lg={12}>
+        <Col xs={20} lg={12}>
           <Row>
             <Typography.Title
               className="fontFamily2"
               style={{
-                fontSize: "68px",
+                fontSize:  window.innerWidth < 800 ? "35px" : "65px",
                 color: "#222",
                 fontStyle: "normal",
                 fontWeight: 700,
-                lineHeight: "68px",
-                marginBottom: 5,
+    
+                marginBottom: 0,
                 zIndex: 2,
                 marginTop: 0,
+                paddingTop:window.innerWidth < 800 ? "50px" : "0px"
               }}
             >
               In the World of Cannots
@@ -61,13 +98,13 @@ const responsive = {
             <Typography.Title
               className="fontFamily2"
               style={{
-                fontSize: "68px",
+                fontSize:  window.innerWidth < 800 ? "35px" : "65px",
                 color: "#222",
                 fontStyle: "normal",
                 fontWeight: 700,
                 zIndex: 2,
-                zIndex: 2,
-                lineHeight: "68px",
+
+                // lineHeight: "68px",
                 marginTop: 10,
               }}
             >
@@ -89,9 +126,8 @@ const responsive = {
               {
                 <>
                   A service based platform where we connect, co-relate and
-                  co-create <br />
-                  opportunities alongside entrepreneurs to help streamline their
-                  ideas and <br /> transform their brands into their greatest
+                  co-create opportunities alongside entrepreneurs to help streamline their
+                  ideas and  transform their brands into their greatest
                   assets.
                 </>
               }
@@ -112,18 +148,19 @@ const responsive = {
               padding: "14px 35px",
               height: "auto",
               fontSize: "16px",
+              zIndex:2,
             }}
             size="large"
           >
             Connect with us <BsArrowRightShort style={{ fontSize: "20px" }} />
           </MainButton>
         </Col>
-        <Col xs={24} lg={8} />
-        <div style={{ position: "absolute", right: 0, bottom: 0, zIndex: 0 }}>
+        <Col xs={0} lg={8} />
+        <div style={{ position: "absolute", right: 0, bottom: window.innerWidth < 800 ? 150 : 0, zIndex: 0, }}>
           <Image
             preview={false}
             alt={"Failed to load image"}
-            height={750}
+            height={ window.innerWidth < 800 ? 350 : 700}
             src="/images/objects.png"
           />
         </div>
@@ -137,10 +174,10 @@ const responsive = {
           justifyContent: "center",
           justifyContent: "center",
           alignItems: "center",
-          paddingTop: "150px",
+          paddingTop: "100px",
         }}
       >
-        <Col xs={24} lg={18} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={18} style={{ textAlign: "center" }}>
           <Typography.Text
             className="fontFamily1 textCenter"
             style={{ fontSize: "20px", color: "#424242", textAlign: "center" }}
@@ -166,11 +203,11 @@ const responsive = {
           justifyContent: "center",
           alignItems: "center",
           paddingTop: "100px",
-          paddingBottom: "150px",
+          paddingBottom: "100px",
         }}
       >
-        <Col xs={24} lg={18} style={{ textAlign: "center" }}>
-          <Row justify="space-between">
+        <Col xs={20} lg={18} style={{ textAlign: "center" }}>
+          <Row justify="space-between" gutter={[30,30]}>
             <Col
               xs={24}
               lg={6}
@@ -322,16 +359,16 @@ const responsive = {
           justifyContent: "center",
           justifyContent: "center",
           alignItems: "center",
-          paddingBottom: "150px",
+          paddingBottom: "100px",
         }}
       >
-        <Col xs={24} lg={16} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={14} style={{ textAlign: "center" }}>
           <Typography.Title
             className="fontFamily2 textCenter"
-            style={{ fontSize: "36px", color: "#222", textAlign: "center" }}
+            style={{ fontSize: window.innerWidth < 800 ? "25px" : "35px", color: "#222", textAlign: "center" }}
           >
-            Our motivation for creating this platform is <br /> rooted in the
-            recognition that the entrepreneurial <br />
+            Our motivation for creating this platform is  rooted in the
+            recognition that the entrepreneurial 
             journey is rarely straightforward.
           </Typography.Title>
           <br />
@@ -357,11 +394,11 @@ const responsive = {
           justifyContent: "center",
           justifyContent: "center",
           alignItems: "center",
-          paddingBottom: "150px",
+          paddingBottom: "100px",
           position: "relative",
         }}
       >
-        <div style={{ position: "absolute", left: 0, top: 130 }}>
+        <div style={{ position: "absolute", left: 0, top: 130,display:window.innerWidth < 800 ? "none" : "auto" }}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="941"
@@ -391,11 +428,11 @@ const responsive = {
           </svg>
         </div>
 
-        <Col xs={24} lg={16}>
+        <Col xs={20} lg={16}>
           <Typography.Title
             className="fontFamily2 textCenter"
             style={{
-              fontSize: "50px",
+              fontSize:  window.innerWidth < 800 ? "35px" : "50px",
               fontWeight: "bold",
               color: "#222",
               textAlign: "center",
@@ -407,7 +444,7 @@ const responsive = {
 
           <br />
           <br />
-          <Row justify="space-between">
+          <Row justify="space-between" gutter={[20,50]}>
             <Col
               xs={24}
               lg={10}
@@ -505,10 +542,10 @@ const responsive = {
           justifyContent: "center",
           justifyContent: "center",
           alignItems: "center",
-          paddingBottom: "150px",
+          paddingBottom: "100px",
         }}
       >
-        <Col xs={24} lg={12} style={{ textAlign: "left" }}>
+        <Col xs={20} lg={12} style={{ textAlign: "left" }}>
           <Row>
             <Typography.Text
               className="fontFamily1 "
@@ -571,10 +608,10 @@ const responsive = {
           justifyContent: "center",
           justifyContent: "center",
           alignItems: "center",
-          paddingBottom: "150px",
+          paddingBottom: "100px",
         }}
       >
-        <Col xs={24} lg={20} style={{ textAlign: "left" }}>
+        <Col xs={20} lg={20} style={{ textAlign: "left" }}>
           <Row>
             <Col xs={24} lg={12}>
               <Typography.Title
@@ -611,8 +648,11 @@ const responsive = {
             </Col>
           </Row>
           <br />
-          <Row gutter={50}>
-            <Col xs={24} lg={12}>
+          <Row gutter={[50,50]}>
+            <Col xs={24} lg={12} onClick={() => { window.scrollTo({
+                      top: 0,
+                      behavior: "smooth", // You can use 'auto' for instant scrolling
+                    }); navigate("/blog/1")}}>
               <Row>
                 <Image
                   preview={false}
@@ -620,7 +660,7 @@ const responsive = {
                   style={{
                     border: "1px solid #f2f2f2",
                     borderRadius: "50px",
-                    height: "400px",
+                    height: window.innerWidth < 800 ? "300px" : "400px",
                     width: "100%",
                     objectFit: "cover",
                   }}
@@ -665,7 +705,10 @@ const responsive = {
                 </Typography.Text>
               </Row>
             </Col>
-            <Col xs={24} lg={12}>
+            <Col xs={24} lg={12} onClick={() => { window.scrollTo({
+                      top: 0,
+                      behavior: "smooth", // You can use 'auto' for instant scrolling
+                    }); navigate("/blog/5")}}>
               <Row>
                 <Image
                   preview={false}
@@ -675,7 +718,7 @@ const responsive = {
                   style={{
                     border: "1px solid #f2f2f2",
                     borderRadius: "50px",
-                    height: "400px",
+                    height: window.innerWidth < 800 ? "300px" : "400px",
                     width: "100%",
                     objectFit: "cover",
                   }}
@@ -722,26 +765,26 @@ const responsive = {
         </Col>
       </Row>
 
-       {/* section 7 */}
-       <Row
+     {/* section 7 */}
+     <Row
         className="whiteBackground"
         style={{
           backgroundColor: "white",
           justifyContent: "center",
           justifyContent: "center",
           alignItems: "center",
-          paddingBottom: "150px",
+          paddingBottom: "100px",
         }}
       >
-        <Col xs={24} lg={20} style={{ textAlign: "left" }}>
-          <Row>
+        <Col xs={20} lg={20} style={{ textAlign: "center" }}>
+          <Row justify={"center"}>
            
               <Typography.Title
-                className="fontFamily2 "
+                className="fontFamily2 textCenter"
                 style={{
-                  fontSize: "48px",
+                  fontSize:  window.innerWidth < 800 ? "35px" : "50px",
                   color: "#222",
-                  textAlign: "left",
+                  textAlign: "center",
                   margin: 5,
                   fontWeight:700,
                   display: "flex",
@@ -750,7 +793,7 @@ const responsive = {
               >
                 How We Became the Talk of Town
               </Typography.Title>
-              </Row><Row>
+              </Row> <Row justify={"center"}>
               <Typography.Text
               className="fontFamily1 "
               style={{
@@ -767,8 +810,8 @@ const responsive = {
           </Row>
           <br />
   
-          <Row gutter={0}>
-          <Col xs={24} lg={3} style={{display:'flex',alignItems:'flex-start', justifyContent:'center',flexDirection:'column'}}>
+          <Row gutter={0} justify={"center"}>
+          {/* <Col xs={24} lg={3} style={{display:'flex',alignItems:'flex-start', justifyContent:'center',flexDirection:'column'}}>
               
               <Row style={{ padding: "20px 10px 0 10px" }}>
                 <div className="arrowButton"  onClick={(e) => carousel?.current?.slideNext(e)}>
@@ -782,81 +825,88 @@ const responsive = {
                 </div>
               </Row>
              
-            </Col>
-            <Col xs={24} lg={21}>
+            </Col> */}
+            <Col xs={24} lg={18}>
             <AliceCarousel
       key="carousel"
       mouseTracking
-      disableDotsControls
+      
       disableButtonsControls
       responsive={responsive}
       items={items}
       ref={carousel}
     >
-      {items.map((subItem,subIndex) => {
-        return(<div style={{padding:'20px'}}>
-         <Row  style={{
-                    border: "1px solid #868686",
-                    borderRadius: "32px",
-                    height: "400px",
-                    width: "100%",
-                    objectFit: "cover",
-                    padding:"40px"
-                  }}>
-                    <Col>
-               <Typography.Text
-              className="fontFamily2 "
-              style={{
-                fontSize: "18px",
-                color: "#424242",
-                textAlign: "left",
-                color:'#424242'
-
-              }}
-            >
-            Surkush’s team did a fantastic job on my branding! He took what was a rather vague description of my new agency and helped me develop a logo, name, color scheme and visual language and helped really bring out the best aspects of my company as a brand. He's got great communication skills, goes over and above to deliver and is very receptive to feedback. I completely recommend working with him!"
-
-            </Typography.Text>
-            
-            
-            <hr style={{margin:"40px 0"}} />
-       
-
-            <Row gutter={10} style={{ display: "flex", alignItems: "center" }}>
-            <Col>
-              <Avatar size={50} src={"/images/author2.png"} />
-            </Col>
-            <Col>
-              <Typography.Title
-                className="fontFamily1 "
-                style={{
-                  fontSize: "16px",
-                  color: "#424242",
-                  textAlign: "left",
-                  margin: 5,
-                }}
-              >
-               Client Name
-              </Typography.Title>
-              <Typography.Text
-                className="fontFamily1 "
-                style={{
-                  fontSize: "12px",
-                  color: "#6D6E73",
-                  textAlign: "left",
-                  margin: 5,
-                }}
-              >
-                Position, Business name
-              </Typography.Text>
-            </Col>
-          </Row>
-            </Col>
-              </Row>
-            
-            
-        </div>)
-      })}
+         {items.map((subItem, subIndex) => {
+                  return (
+                    <div style={{ padding: "20px" }}>
+                      <Row
+                        style={{
+                          border: "1px solid #dadada",
+                          borderRadius: "32px",
+                          minHeight: "300px",
+                          width: "100%",
+                          objectFit: "cover",
+                          padding: window.innerWidth < 800 ? "14px" : "35px",
+                        }}
+                      >
+                        <Col>
+                        <div style={{minHeight:"200px",display:'flex', justifyContent:'center',alignItems:'center'}}>
+                          <Typography.Text
+                            className="fontFamily2 "
+                            style={{
+                              fontSize:  window.innerWidth < 800 ? "14px" : "18px",
+                              color: "#424242",
+                              textAlign: "center",
+                              
+                            }}
+                          >
+                          " {subItem.comment} "
+                          </Typography.Text>
+                          </div>
+                      
+                          <Row
+                          justify={"center"}
+                            gutter={10}
+                            style={{ display: "flex", alignItems: "center" }}
+                          >
+                           
+                              <Avatar size={50} src={subItem.image} />
+                          </Row>
+                          <Row
+                          justify={"center"}
+                            gutter={10}
+                            style={{ display: "flex", alignItems: "center" }}
+                          >
+                          
+                              <Typography.Title
+                                className="fontFamily1 "
+                                style={{
+                                  fontSize: "16px",
+                                  color: "#424242",
+                                  textAlign: "left",
+                                  margin: 5,
+                                }}
+                              >
+                               {subItem.author}
+                              </Typography.Title>
+                              <Typography.Text
+                                className="fontFamily1 "
+                                style={{
+                                  fontSize: "12px",
+                                  color: "#6D6E73",
+                                  textAlign: "left",
+                                  margin: 5,
+                                }}
+                              >
+                               {subItem.position} 
+                              </Typography.Text>
+                            
+                          </Row>
+                        </Col>
+                      </Row>
+                    </div>
+                  );
+                })}
 
     </AliceCarousel>
 

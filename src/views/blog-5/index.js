@@ -28,7 +28,7 @@ function Blog5() {
                 preview={false}
                 alt={"Failed to load image"}
                 width={"100%"}
-                height={"90vh"}
+                minHeight={window.innerWidth < 800 ? "50vh" : "90vh"}
                 
                 style={{ objectFit: "cover" }}
                 src="/images/blog2.png"
@@ -47,7 +47,7 @@ function Blog5() {
           paddingTop: "100px",
         }}
       >
-        <Col xs={24} lg={20} style={{ textAlign: "left" }}>
+        <Col xs={20} lg={20} style={{ textAlign: "left" }}>
         <Typography.Text
             className="fontFamily1"
             style={{ fontSize: "28px", color: "#424242", textAlign: "left" }}
@@ -57,7 +57,7 @@ function Blog5() {
           <Typography.Title
             className="fontFamily2"
             style={{
-              fontSize: "56px",
+               fontSize:  window.innerWidth < 800 ? "35px" : "56px",
               fontWeight: "bold",
               color: "#222",
               textAlign: "left",
@@ -79,7 +79,7 @@ Elevating the Fitness Journey       </Typography.Title>
           paddingTop: "100px",
         }}
       >
-        <Col xs={24} lg={20} style={{ textAlign: "left" }}>
+        <Col xs={20} lg={20} style={{ textAlign: "left" }}>
         <Row
         className="whiteBackground"
         style={{
@@ -87,7 +87,7 @@ Elevating the Fitness Journey       </Typography.Title>
           justifyContent: "space-between",
           alignItems: "center",
         }}
-        gutter={50}
+        gutter={[50,50]}
       >
         <Col xs={24} lg={14} style={{ textAlign: "left" }}>
           <Typography.Text
@@ -204,7 +204,7 @@ Mind Muscle Physique, a forward-thinking training web app, embarked on a mission
           padding:50
         }}
       >
-        <Col xs={24} lg={12} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={12} style={{ textAlign: "center" }}>
         <Typography.Title
                   className="fontFamily1 textCenter"
                   style={{
@@ -230,7 +230,7 @@ Mind Muscle Physique, a forward-thinking training web app, embarked on a mission
           paddingBottom: "150px",
         }}
       >
-        <Col xs={24} lg={18} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={18} style={{ textAlign: "center" }}>
           <Row justify="space-between">
             <Col
               xs={24}
@@ -498,7 +498,7 @@ Mind Muscle Physique, a forward-thinking training web app, embarked on a mission
 
         }}
       >
-        <Col xs={24} lg={14} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={14} style={{ textAlign: "center" }}>
         <Typography.Title
             className="fontFamily2 textCenter"
             style={{
@@ -538,7 +538,7 @@ Mind Muscle Physique, a forward-thinking training web app, embarked on a mission
 
         }}
       >
-        <Col xs={24} lg={12} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={12} style={{ textAlign: "center" }}>
         <Typography.Title
             className="fontFamily2 textCenter"
             style={{
@@ -606,7 +606,7 @@ Mind Muscle Physique, a forward-thinking training web app, embarked on a mission
           paddingBottom: "50px",
         }}
       >
-        <Col xs={24} lg={18} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={18} style={{ textAlign: "center" }}>
          <Row justify="space-between">
             <Col
               xs={24}
@@ -705,7 +705,7 @@ Mind Muscle Physique, a forward-thinking training web app, embarked on a mission
           paddingBottom: "150px",
         }}
       >
-        <Col xs={24} lg={18} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={18} style={{ textAlign: "center" }}>
          <Row justify="center">
             <Col
               xs={24}
@@ -769,7 +769,7 @@ Mind Muscle Physique, a forward-thinking training web app, embarked on a mission
         }}
         gutter={10}
       >
-        <Col xs={24} md={20}>
+        <Col xs={20} md={20}>
      
           <Image
                 preview={false}
@@ -827,7 +827,7 @@ Mind Muscle Physique, a forward-thinking training web app, embarked on a mission
 
         }}
       >
-        <Col xs={24} lg={14} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={14} style={{ textAlign: "center" }}>
 
         <Typography.Text
                   className="fontFamily1 textCenter"

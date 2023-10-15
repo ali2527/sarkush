@@ -26,7 +26,7 @@ const MyRouter = () => {
           element={
             <ClientLayout
               head={{ title: "Home", description: "Some Description." }}
-              headerStyle={{ height: { base: "40px", md: 14 } }}
+              headerStyle={{ height: { base: "35px", md: 14 } }}
             >
               <Home />
             </ClientLayout>
@@ -37,7 +37,7 @@ const MyRouter = () => {
           element={
             <ClientLayout
               head={{ title: "About Us", description: "Some Description." }}
-              headerStyle={{ height: { base: "40px", md: 14 } }}
+              headerStyle={{ height: { base: "35px", md: 14 } }}
             >
               <AboutUs />
             </ClientLayout>
@@ -49,7 +49,7 @@ const MyRouter = () => {
           element={
             <ClientLayout
               head={{ title: "Privacy Policy", description: "Some Description." }}
-              headerStyle={{ height: { base: "40px", md: 14 } }}
+              headerStyle={{ height: { base: "35px", md: 14 } }}
             >
               <PrivacyPolicy />
             </ClientLayout>
@@ -61,7 +61,7 @@ const MyRouter = () => {
           element={
             <ClientLayout
               head={{ title: "About Us", description: "Some Description." }}
-              headerStyle={{ height: { base: "40px", md: 14 } }}
+              headerStyle={{ height: { base: "35px", md: 14 } }}
             >
               <ConnectWithUs />
             </ClientLayout>
@@ -72,7 +72,7 @@ const MyRouter = () => {
           element={
             <ClientLayout
               head={{ title: "Blog", description: "Some Description." }}
-              headerStyle={{ height: { base: "40px", md: 14 } }}
+              headerStyle={{ height: { base: "35px", md: 14 } }}
             >
               <Blog/>
             </ClientLayout>
@@ -83,7 +83,7 @@ const MyRouter = () => {
           element={
             <ClientLayout
               head={{ title: "Blog", description: "Some Description." }}
-              headerStyle={{ height: { base: "40px", md: 14 } }}
+              headerStyle={{ height: { base: "35px", md: 14 } }}
             >
               <Blog1/>
             </ClientLayout>
@@ -95,7 +95,7 @@ const MyRouter = () => {
           element={
             <ClientLayout
               head={{ title: "Blog", description: "Some Description." }}
-              headerStyle={{ height: { base: "40px", md: 14 } }}
+              headerStyle={{ height: { base: "35px", md: 14 } }}
             >
               <Blog2/>
             </ClientLayout>
@@ -107,7 +107,7 @@ const MyRouter = () => {
           element={
             <ClientLayout
               head={{ title: "Blog", description: "Some Description." }}
-              headerStyle={{ height: { base: "40px", md: 14 } }}
+              headerStyle={{ height: { base: "35px", md: 14 } }}
             >
               <Blog3/>
             </ClientLayout>
@@ -119,7 +119,7 @@ const MyRouter = () => {
           element={
             <ClientLayout
               head={{ title: "Blog", description: "Some Description." }}
-              headerStyle={{ height: { base: "40px", md: 14 } }}
+              headerStyle={{ height: { base: "35px", md: 14 } }}
             >
               <Blog4/>
             </ClientLayout>
@@ -131,7 +131,7 @@ const MyRouter = () => {
           element={
             <ClientLayout
               head={{ title: "Blog", description: "Some Description." }}
-              headerStyle={{ height: { base: "40px", md: 14 } }}
+              headerStyle={{ height: { base: "35px", md: 14 } }}
             >
               <Blog5/>
             </ClientLayout>
@@ -142,7 +142,7 @@ const MyRouter = () => {
           element={
             <ClientLayout
               head={{ title: "Work", description: "Some Description." }}
-              headerStyle={{ height: { base: "40px", md: 14 } }}
+              headerStyle={{ height: { base: "35px", md: 14 } }}
             >
               <Work/>
             </ClientLayout>
@@ -153,7 +153,7 @@ const MyRouter = () => {
           element={
             <ClientLayout
               head={{ title: "Contact Us", description: "Some Description." }}
-              headerStyle={{ height: { base: "40px", md: 14 } }}
+              headerStyle={{ height: { base: "35px", md: 14 } }}
             >
               <ContactUs />
             </ClientLayout>

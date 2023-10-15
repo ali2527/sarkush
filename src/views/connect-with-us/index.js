@@ -12,28 +12,53 @@ import Marquee from "react-fast-marquee";
 function ConnectWithUs() {
   const navigate = useNavigate();
   const carousel = useRef();
-  const items = [
-    <div className="item" data-value="1">
-      1
-    </div>,
-    <div className="item" data-value="2">
-      2
-    </div>,
-    <div className="item" data-value="3">
-      3
-    </div>,
-    <div className="item" data-value="4">
-      4
-    </div>,
-    <div className="item" data-value="5">
-      5
-    </div>,
-  ];
 
+  const items = [
+    {
+      "key":1,
+      "author":"Darryl C.",
+      "comment":"The entire process was smooth, and any changes or revisions were revised in a professional and timely manner. Raamish went above and beyondto ensure my needs were met, I would definitely work with him again",
+      "company":"",
+      "position":"Brand Designer",
+      "image":"./images/author2.png"
+    },
+    {
+      "key":2,
+      "author":"Chris J.",
+      "comment":"Raamish and his teamdid a fantastic job on my branding!. He took what was a rather vague description of my agency and helped me develope a logo ,name , color scheme and visual language and reallly helped me bring out the best aspect of my company as a brand. He's got great copmmunication skills, goes over and above to deliever and is veryreceptive to feedback. I completely recommend working with him",
+      "company":"SEO Agency",
+      "position":"Built a brand Identity",
+      "image":"./images/author3.jpg"
+    },
+    {
+      "key":3,
+      "author":"Mustafa K.",
+      "comment":"Raamish and his teamdid a fantastic job on my branding!. He took what was a rather vague description of my agency and helped me develope a logo ,name , color scheme and visual language and reallly helped me bring out the best aspect of my company as a brand.",
+      "company":"SEO Agency",
+      "position":"Built a brand Identity",
+      "image":"./images/author4.jpg"
+    },
+    {
+      "key":4,
+      "author":"Mind Muscle Physique",
+      "comment":"Fluent Communication and was extreamly professional assisted us with completing the job right away. I would definitely recommend him again",
+      "company":"",
+      "position":"",
+      "image":"./images/author5.jpg"
+    },
+    {
+      "key":5,
+      "author":"TeleHealth.",
+      "comment":"Fantastic Counterparty to work with - communicated well and were always their with there responses. They were reseptive to feedback and I was impressed with the high quality work ",
+      "company":"",
+      "position":"",
+      "image":"./images/author6.png"
+    }
+  ];
   const responsive = {
     0: { items: 1 },
-    568: { items: 2 },
-    1024: { items: 2 },
+    568: { items: 1 },
+    1024: { items: 1 },
   };
 
   return (
@@ -50,12 +75,12 @@ function ConnectWithUs() {
           padding: "100px 0",
         }}
       >
-        <Col xs={24} lg={20}>
+        <Col xs={20} lg={20}>
           <Row style={{ textAlign: "center", justifyContent: "center" }}>
             <Typography.Title
               className="fontFamily2 textCenter"
               style={{
-                fontSize: "56px",
+                fontSize:  window.innerWidth < 800 ? "35px" : "56px",
                 color: "#222",
                 fontStyle: "normal",
                 fontWeight: 700,
@@ -79,7 +104,7 @@ function ConnectWithUs() {
                   height: "400px",
                   width: "100%",
                   objectFit: "cover",
-                  padding: "40px",
+                  padding: "35px",
                   display: "flex",
                   justifyContent: "space-between",
                   alignItems: "space-between",
@@ -129,7 +154,7 @@ function ConnectWithUs() {
                   height: "400px",
                   width: "100%",
                   objectFit: "cover",
-                  padding: "40px",
+                  padding: "35px",
                   display: "flex",
                   justifyContent: "space-between",
                   alignItems: "space-between",
@@ -181,7 +206,7 @@ function ConnectWithUs() {
                   height: "400px",
                   width: "100%",
                   objectFit: "cover",
-                  padding: "40px",
+                  padding: "35px",
                   display: "flex",
                   justifyContent: "space-between",
                   alignItems: "space-between",
@@ -232,7 +257,7 @@ function ConnectWithUs() {
                   height: "400px",
                   width: "100%",
                   objectFit: "cover",
-                  padding: "40px",
+                  padding: "35px",
                   display: "flex",
                   justifyContent: "space-between",
                   alignItems: "space-between",
@@ -289,7 +314,7 @@ function ConnectWithUs() {
           paddingBottom: "50px",
         }}
       >
-        <Col xs={24} lg={12} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={12} style={{ textAlign: "center" }}>
           <Typography.Title
             className="fontFamily2 textCenter"
             style={{
@@ -325,7 +350,7 @@ function ConnectWithUs() {
           paddingBottom: "150px",
         }}
       >
-        <Col xs={24} lg={18} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={18} style={{ textAlign: "center" }}>
           <Row justify="space-between">
             <Col
               xs={24}
@@ -1094,8 +1119,8 @@ function ConnectWithUs() {
         </Marquee>
       </Row>
 
-      {/* section 7 */}
-      <Row
+     {/* section 7 */}
+     <Row
         className="whiteBackground"
         style={{
           backgroundColor: "white",
@@ -1105,118 +1130,108 @@ function ConnectWithUs() {
           padding: "100px 0",
         }}
       >
-        <Col xs={24} lg={20} style={{ textAlign: "left" }}>
-          <Row>
-            <Typography.Title
-              className="fontFamily2 "
-              style={{
-                fontSize: "48px",
-                color: "#222",
-                textAlign: "left",
-                margin: 5,
-                fontWeight: 700,
-                display: "flex",
-                alignItems: "center",
-              }}
-            >
-              How We Became the Talk of Town
-            </Typography.Title>
-          </Row>
-          <Row>
-            <Typography.Text
+        <Col xs={20} lg={20} style={{ textAlign: "center" }}>
+          <Row justify={"center"}>
+           
+              <Typography.Title
+                className="fontFamily2 textCenter"
+                style={{
+                  fontSize: "48px",
+                  color: "#222",
+                  textAlign: "center",
+                  margin: 5,
+                  fontWeight:700,
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                How We Became the Talk of Town
+              </Typography.Title>
+              </Row> <Row justify={"center"}>
+              <Typography.Text
               className="fontFamily1 "
               style={{
                 fontSize: "18px",
                 color: "#424242",
                 textAlign: "left",
+             
               }}
             >
-              Read what people have to say about us.
+            Read what people have to say about us.
             </Typography.Text>
+          
+           
           </Row>
           <br />
-
-          <Row gutter={0}>
-            <Col
-              xs={24}
-              lg={3}
-              style={{
-                display: "flex",
-                alignItems: "flex-start",
-                justifyContent: "center",
-                flexDirection: "column",
-              }}
-            >
+  
+          <Row gutter={0} justify={"center"}>
+          {/* <Col xs={24} lg={3} style={{display:'flex',alignItems:'flex-start', justifyContent:'center',flexDirection:'column'}}>
+              
               <Row style={{ padding: "20px 10px 0 10px" }}>
-                <div
-                  className="arrowButton"
-                  onClick={(e) => carousel?.current?.slideNext(e)}
-                >
-                  <BsArrowRight />
+                <div className="arrowButton"  onClick={(e) => carousel?.current?.slideNext(e)}>
+                <BsArrowRight />
                 </div>
+             
               </Row>
               <Row style={{ padding: "0 10px 0 10px" }}>
-                <div
-                  className="arrowButton"
-                  onClick={(e) => carousel?.current?.slidePrev(e)}
-                >
-                  <BsArrowLeft />
+              <div className="arrowButton" onClick={(e) => carousel?.current?.slidePrev(e)}>
+                <BsArrowLeft/>
                 </div>
               </Row>
-            </Col>
-            <Col xs={24} lg={21}>
-              <AliceCarousel
-                key="carousel"
-                mouseTracking
-                disableDotsControls
-                disableButtonsControls
-                responsive={responsive}
-                items={items}
-                ref={carousel}
-              >
-                {items.map((subItem, subIndex) => {
+             
+            </Col> */}
+            <Col xs={24} lg={18}>
+            <AliceCarousel
+      key="carousel"
+      mouseTracking
+      
+      disableButtonsControls
+      responsive={responsive}
+      items={items}
+      ref={carousel}
+    >
+       {items.map((subItem, subIndex) => {
                   return (
                     <div style={{ padding: "20px" }}>
                       <Row
                         style={{
-                          border: "1px solid #868686",
+                          border: "1px solid #dadada",
                           borderRadius: "32px",
-                          height: "400px",
+                          minHeight: "300px",
                           width: "100%",
                           objectFit: "cover",
-                          padding: "40px",
+                          padding: window.innerWidth < 800 ? "14px" : "35px",
                         }}
                       >
                         <Col>
+                        <div style={{minHeight:"200px",display:'flex', justifyContent:'center',alignItems:'center'}}>
                           <Typography.Text
                             className="fontFamily2 "
                             style={{
-                              fontSize: "18px",
+                              fontSize:  window.innerWidth < 800 ? "14px" : "18px",
                               color: "#424242",
-                              textAlign: "left",
-                              color: "#424242",
+                              textAlign: "center",
+                              
                             }}
                           >
-                            Surkush’s team did a fantastic job on my branding!
-                            He took what was a rather vague description of my
-                            new agency and helped me develop a logo, name, color
-                            scheme and visual language and helped really bring
-                            out the best aspects of my company as a brand. He's
-                            got great communication skills, goes over and above
-                            to deliver and is very receptive to feedback. I
-                            completely recommend working with him!"
+                          " {subItem.comment} "
                           </Typography.Text>
-
-                          <hr style={{ margin: "40px 0" }} />
-
+                          </div>
+                      
                           <Row
+                          justify={"center"}
                             gutter={10}
                             style={{ display: "flex", alignItems: "center" }}
                           >
-                            <Col>
-                              <Avatar size={50} src={"/images/author2.png"} />
-                            </Col>
-                            <Col>
+                           
+                              <Avatar size={50} src={subItem.image} />
+                          </Row>
+                          <Row
+                          justify={"center"}
+                            gutter={10}
+                            style={{ display: "flex", alignItems: "center" }}
+                          >
+                          
                               <Typography.Title
                                 className="fontFamily1 "
                                 style={{
@@ -1226,7 +1241,7 @@ function ConnectWithUs() {
                                   margin: 5,
                                 }}
                               >
-                                Client Name
+                               {subItem.author}
                               </Typography.Title>
                               <Typography.Text
                                 className="fontFamily1 "
@@ -1237,17 +1252,19 @@ function ConnectWithUs() {
                                   margin: 5,
                                 }}
                               >
-                                Position, Business name
+                               {subItem.position} 
                               </Typography.Text>
-                            </Col>
+                            
                           </Row>
                         </Col>
                       </Row>
                     </div>
                   );
                 })}
-              </AliceCarousel>
+    </AliceCarousel>
+
             </Col>
+          
           </Row>
         </Col>
       </Row>

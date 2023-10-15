@@ -5,16 +5,10 @@ import MainButton from "../../components/MainButton";
 import { Col, Row, Image, Typography, Layout, Avatar } from "antd";
 import { BsArrowRightShort, BsArrowLeft ,BsArrowRight } from "react-icons/bs";
 import { FiArrowDownRight } from "react-icons/fi";
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
-  const carousel = useRef() 
-  const items = [
-    <div className="item" data-value="1">1</div>,
-    <div className="item" data-value="2">2</div>,
-    <div className="item" data-value="3">3</div>,
-    <div className="item" data-value="4">4</div>,
-    <div className="item" data-value="5">5</div>,
-];
+const navigate = useNavigate()
 
 
 const responsive = {
@@ -118,8 +112,11 @@ const responsive = {
         }}
       >
         <Col xs={24} lg={20} style={{ textAlign: "left" }}>
-          <Row gutter={50}>
-            <Col xs={24} lg={12}>
+          <Row gutter={[50,50]}>
+            <Col xs={24} lg={12} onClick={() => { window.scrollTo({
+                      top: 0,
+                      behavior: "smooth", // You can use 'auto' for instant scrolling
+                    }); navigate("/blog/1")}}>
               <Row>
                 <Image
                   preview={false}
@@ -172,7 +169,10 @@ const responsive = {
                 </Typography.Text>
               </Row>
             </Col>
-            <Col xs={24} lg={12}>
+            <Col xs={24} lg={12} onClick={() => { window.scrollTo({
+                      top: 0,
+                      behavior: "smooth", // You can use 'auto' for instant scrolling
+                    }); navigate("/blog/5")}}>
               <Row>
                 <Image
                   preview={false}
@@ -241,8 +241,11 @@ const responsive = {
         }}
       >
         <Col xs={24} lg={20} style={{ textAlign: "left" }}>
-          <Row gutter={50}>
-            <Col xs={24} lg={12}>
+          <Row gutter={[50,50]}>
+            <Col xs={24} lg={12} onClick={() => { window.scrollTo({
+                      top: 0,
+                      behavior: "smooth", // You can use 'auto' for instant scrolling
+                    }); navigate("/blog/2")}}>
               <Row>
                 <Image
                   preview={false}
@@ -295,7 +298,10 @@ const responsive = {
                 </Typography.Text>
               </Row>
             </Col>
-            <Col xs={24} lg={12}>
+            <Col xs={24} lg={12} onClick={() => { window.scrollTo({
+                      top: 0,
+                      behavior: "smooth", // You can use 'auto' for instant scrolling
+                    }); navigate("/blog/4")}}>
               <Row>
                 <Image
                   preview={false}

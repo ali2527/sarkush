@@ -28,7 +28,7 @@ function Blog4() {
                 preview={false}
                 alt={"Failed to load image"}
                 width={"100%"}
-                height={"90vh"}
+                minHeight={window.innerWidth < 800 ? "50vh" : "90vh"}
                 
                 style={{ objectFit: "cover" }}
                 src="/images/blog4.png"
@@ -47,7 +47,7 @@ function Blog4() {
           paddingTop: "100px",
         }}
       >
-        <Col xs={24} lg={20} style={{ textAlign: "left" }}>
+        <Col xs={20} lg={20} style={{ textAlign: "left" }}>
         <Typography.Text
             className="fontFamily1"
             style={{ fontSize: "28px", color: "#424242", textAlign: "left" }}
@@ -57,7 +57,7 @@ function Blog4() {
           <Typography.Title
             className="fontFamily2"
             style={{
-              fontSize: "56px",
+               fontSize:  window.innerWidth < 800 ? "35px" : "56px",
               fontWeight: "bold",
               color: "#222",
               textAlign: "left",
@@ -79,7 +79,7 @@ Navigating the Real Estate Landscape with Expertise and Care          </Typograp
           paddingTop: "100px",
         }}
       >
-        <Col xs={24} lg={20} style={{ textAlign: "left" }}>
+        <Col xs={20} lg={20} style={{ textAlign: "left" }}>
         <Row
         className="whiteBackground"
         style={{
@@ -87,7 +87,7 @@ Navigating the Real Estate Landscape with Expertise and Care          </Typograp
           justifyContent: "space-between",
           alignItems: "center",
         }}
-        gutter={50}
+        gutter={[50,50]}
       >
         <Col xs={24} lg={14} style={{ textAlign: "left" }}>
           <Typography.Text
@@ -218,7 +218,7 @@ Navigating the Real Estate Landscape with Expertise and Care          </Typograp
           padding:50
         }}
       >
-        <Col xs={24} lg={12} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={12} style={{ textAlign: "center" }}>
         <Typography.Title
                   className="fontFamily1 textCenter"
                   style={{
@@ -244,7 +244,7 @@ Navigating the Real Estate Landscape with Expertise and Care          </Typograp
           paddingBottom: "150px",
         }}
       >
-        <Col xs={24} lg={18} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={18} style={{ textAlign: "center" }}>
           <Row justify="space-between">
             <Col
               xs={24}
@@ -491,7 +491,7 @@ Navigating the Real Estate Landscape with Expertise and Care          </Typograp
 
         }}
       >
-        <Col xs={24} lg={14} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={14} style={{ textAlign: "center" }}>
         <Typography.Title
             className="fontFamily2 textCenter"
             style={{
@@ -554,7 +554,7 @@ Navigating the Real Estate Landscape with Expertise and Care          </Typograp
 
         }}
       >
-        <Col xs={24} lg={14} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={14} style={{ textAlign: "center" }}>
         <Typography.Title
             className="fontFamily2 textCenter"
             style={{
@@ -595,7 +595,7 @@ Navigating the Real Estate Landscape with Expertise and Care          </Typograp
           textAlign: "center",
         }}
       >
-        <Col xs={24} md={20}>
+        <Col xs={20} md={20}>
           <Row gutter={20} justify={"center"}>
 
           <Col xs={24} md={20}>
@@ -626,7 +626,7 @@ Navigating the Real Estate Landscape with Expertise and Care          </Typograp
           padding:50
         }}
       >
-        <Col xs={24} lg={12} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={12} style={{ textAlign: "center" }}>
         <Typography.Title
                   className="fontFamily1 textCenter"
                   style={{
@@ -652,7 +652,7 @@ Navigating the Real Estate Landscape with Expertise and Care          </Typograp
           paddingBottom: "50px",
         }}
       >
-        <Col xs={24} lg={18} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={18} style={{ textAlign: "center" }}>
          <Row justify="space-between">
             <Col
               xs={24}
@@ -751,7 +751,7 @@ Navigating the Real Estate Landscape with Expertise and Care          </Typograp
           paddingBottom: "150px",
         }}
       >
-        <Col xs={24} lg={18} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={18} style={{ textAlign: "center" }}>
          <Row justify="center">
             <Col
               xs={24}
@@ -814,7 +814,7 @@ Navigating the Real Estate Landscape with Expertise and Care          </Typograp
         }}
         gutter={10}
       >
-        <Col xs={24} md={20}>
+        <Col xs={20} md={20}>
           <Row gutter={20}>
           <Col xs={24} md={12}>
           <Image
@@ -856,7 +856,7 @@ Navigating the Real Estate Landscape with Expertise and Care          </Typograp
         }}
         gutter={10}
       >
-        <Col xs={24} md={20}>
+        <Col xs={20} md={20}>
           <Row gutter={20}>
           <Col xs={24} md={12}>
             <div>
@@ -978,7 +978,7 @@ Navigating the Real Estate Landscape with Expertise and Care          </Typograp
 
         }}
       >
-        <Col xs={24} lg={14} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={14} style={{ textAlign: "center" }}>
 
         <Typography.Text
                   className="fontFamily1 textCenter"
@@ -1047,7 +1047,7 @@ Navigating the Real Estate Landscape with Expertise and Care          </Typograp
 
         }}
       >
-        <Col xs={24} lg={14} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={14} style={{ textAlign: "center" }}>
 
         <Typography.Text
                   className="fontFamily1 textCenter"

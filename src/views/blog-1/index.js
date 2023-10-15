@@ -46,7 +46,7 @@ function Blog1() {
           paddingTop: "100px",
         }}
       >
-        <Col xs={24} lg={20} style={{ textAlign: "left" }}>
+        <Col xs={20} lg={20} style={{ textAlign: "left" }}>
         <Typography.Text
             className="fontFamily1"
             style={{ fontSize: "28px", color: "#424242", textAlign: "left" }}
@@ -56,7 +56,7 @@ function Blog1() {
           <Typography.Title
             className="fontFamily2"
             style={{
-              fontSize: "56px",
+               fontSize:  window.innerWidth < 800 ? "35px" : "56px",
               fontWeight: "bold",
               color: "#222",
               textAlign: "left",
@@ -79,7 +79,7 @@ function Blog1() {
           paddingTop: "100px",
         }}
       >
-        <Col xs={24} lg={20} style={{ textAlign: "left" }}>
+        <Col xs={20} lg={20} style={{ textAlign: "left" }}>
         <Row
         className="whiteBackground"
         style={{
@@ -87,9 +87,9 @@ function Blog1() {
           justifyContent: "space-between",
           alignItems: "center",
         }}
-        gutter={50}
+        gutter={[50,50]}
       >
-        <Col xs={24} lg={14} style={{ textAlign: "left" }}>
+        <Col xs={20} lg={14} style={{ textAlign: "left" }}>
           <Typography.Text
             className="fontFamily1 textCenter"
             style={{ fontSize: "20px", color: "#424242", textAlign: "center" }}
@@ -104,7 +104,7 @@ function Blog1() {
            It is a revolutionary mindfulness app that seeks to simplify the complex landscape of mental well-being. In a world where the pace of life can often become overwhelming, Unwind aims to serve as a tranquil oasis. This app is designed with a singular purpose - to guide users towards a place of inner peace and mental clarity, by making mindfulness and mental health support more accessible and intuitive.
           </Typography.Text>
         </Col>
-        <Col xs={24} lg={9} style={{ textAlign: "left" }}>
+        <Col xs={20} lg={9} style={{ textAlign: "left" }}>
      
           <Typography.Title
             className="fontFamily2"
@@ -209,7 +209,7 @@ function Blog1() {
           padding: "50px 0 ",
         }}
       >
-        <Col xs={24} lg={20} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={20} style={{ textAlign: "center" }}>
         <Image
                 preview={false}
                 alt={"Failed to load image"}
@@ -232,7 +232,7 @@ function Blog1() {
           paddingBottom:100
         }}
       >
-        <Col xs={24} lg={12} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={12} style={{ textAlign: "center" }}>
         <Typography.Text
                   className="fontFamily1 textCenter"
                   style={{
@@ -258,10 +258,10 @@ function Blog1() {
           paddingBottom: "150px",
         }}
       >
-        <Col xs={24} lg={18} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={18} style={{ textAlign: "center" }}>
           <Row justify="space-between">
             <Col
-              xs={24}
+              xs={20}
               lg={10}
               style={{
                 textAlign: "left",
@@ -310,7 +310,7 @@ function Blog1() {
             </Col>
 
             <Col
-              xs={24}
+              xs={20}
               lg={10}
               style={{
                 textAlign: "left",
@@ -365,7 +365,7 @@ function Blog1() {
 
           <Row justify="space-between">
             <Col
-              xs={24}
+              xs={20}
               lg={10}
               style={{
                 textAlign: "left",
@@ -417,7 +417,7 @@ function Blog1() {
             </Col>
 
             <Col
-              xs={24}
+              xs={20}
               lg={10}
               style={{
                 textAlign: "left",
@@ -481,7 +481,7 @@ function Blog1() {
           padding: "50px 0 0",
         }}
       >
-        <Col xs={24} lg={20} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={20} style={{ textAlign: "center" }}>
           <Typography.Title
             className="fontFamily2 textCenter"
             style={{
@@ -497,10 +497,10 @@ function Blog1() {
           <br />
           <br />
           <br />
-          <Col xs={24} lg={24} style={{ textAlign: "center" }}>
-            <Row justify="space-between">
+          <Col xs={20} lg={24} style={{ textAlign: "center" }}>
+            <Row justify="space-between" gutter={[50,50]}>
               <Col
-                xs={24}
+                xs={20}
                 lg={6}
                 style={{
                   textAlign: "center",
@@ -533,7 +533,7 @@ function Blog1() {
                 <br />
                 <Row>
                 <div
-                    style={{ position: "absolute", left: "50%", bottom: "28%",zIndex:2 }}
+                    style={{ position: "absolute", left: "50%", bottom: "28%",zIndex:2,display:window.innerWidth < 800 ? "none" :"auto" }}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -586,7 +586,7 @@ function Blog1() {
               </Col>
 
               <Col
-                xs={24}
+                xs={20}
                 lg={6}
                 style={{
                   textAlign: "center",
@@ -619,7 +619,7 @@ function Blog1() {
                 <br />
                 <Row>
                   <div
-                    style={{ position: "absolute", left: "50%", bottom: "28%",zIndex:2 }}
+                    style={{ position: "absolute", left: "50%", bottom: "28%",zIndex:2,display:window.innerWidth < 800 ? "none" :"auto" }}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -668,7 +668,7 @@ function Blog1() {
               </Col>
 
               <Col
-                xs={24}
+                xs={20}
                 lg={6}
                 style={{
                   textAlign: "center",
@@ -701,7 +701,7 @@ function Blog1() {
                 <br />
                 <Row>
                   <div
-                    style={{ position: "absolute", left: "50%", bottom: "28%",zIndex:2 }}
+                    style={{ position: "absolute", left: "50%", bottom: "28%",zIndex:2,display:window.innerWidth < 800 ? "none" :"auto" }}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -750,7 +750,7 @@ function Blog1() {
               </Col>
 
               <Col
-                xs={24}
+                xs={20}
                 lg={6}
                 style={{
                   textAlign: "center",
@@ -805,7 +805,7 @@ function Blog1() {
             </Row>
             <Row justify="space-between">
               <Col
-                xs={24}
+                xs={20}
                 lg={6}
                 style={{
                   textAlign: "center",
@@ -856,7 +856,7 @@ function Blog1() {
 
         }}
       >
-        <Col xs={24} lg={14} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={14} style={{ textAlign: "center" }}>
         <Typography.Text
                   className="fontFamily1 textCenter"
                   style={{
@@ -881,7 +881,7 @@ function Blog1() {
           padding: "0",
         }}
       >
-        <Col xs={24} lg={16} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={16} style={{ textAlign: "center" }}>
           <Typography.Title
             className="fontFamily2 textCenter"
             style={{
@@ -1113,7 +1113,7 @@ function Blog1() {
 
         }}
       >
-        <Col xs={24} lg={14} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={14} style={{ textAlign: "center" }}>
         <Typography.Title
             className="fontFamily2 textCenter"
             style={{
@@ -1151,7 +1151,7 @@ function Blog1() {
 
         }}
       >
-        <Col xs={24} lg={14} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={14} style={{ textAlign: "center" }}>
         <Typography.Title
             className="fontFamily2 textCenter"
             style={{
@@ -1213,7 +1213,7 @@ function Blog1() {
 
         }}
       >
-        <Col xs={24} lg={14} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={14} style={{ textAlign: "center" }}>
         <Typography.Title
             className="fontFamily2 textCenter"
             style={{
@@ -1302,7 +1302,7 @@ function Blog1() {
 
         }}
       >
-        <Col xs={24} lg={14} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={14} style={{ textAlign: "center" }}>
         <Typography.Title
             className="fontFamily2 textCenter"
             style={{
@@ -1390,7 +1390,7 @@ function Blog1() {
           paddingBottom: "150px",
         }}
       >
-        <Col xs={24} lg={14} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={14} style={{ textAlign: "center" }}>
           <Typography.Title
             className="fontFamily2 textCenter"
             style={{

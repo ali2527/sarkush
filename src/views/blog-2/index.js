@@ -28,7 +28,7 @@ function Blog1() {
                 preview={false}
                 alt={"Failed to load image"}
                 width={"100%"}
-                height={"90vh"}
+                minHeight={window.innerWidth < 800 ? "50vh" : "90vh"}
                 
                 style={{ objectFit: "cover" }}
                 src="/images/blog2_1.png"
@@ -47,7 +47,7 @@ function Blog1() {
           paddingTop: "100px",
         }}
       >
-        <Col xs={24} lg={20} style={{ textAlign: "left" }}>
+        <Col xs={20} lg={20} style={{ textAlign: "left" }}>
         <Typography.Text
             className="fontFamily1"
             style={{ fontSize: "28px", color: "#424242", textAlign: "left" }}
@@ -57,7 +57,7 @@ function Blog1() {
           <Typography.Title
             className="fontFamily2"
             style={{
-              fontSize: "56px",
+               fontSize:  window.innerWidth < 800 ? "35px" : "56px",
               fontWeight: "bold",
               color: "#222",
               textAlign: "left",
@@ -80,7 +80,7 @@ function Blog1() {
           paddingTop: "100px",
         }}
       >
-        <Col xs={24} lg={20} style={{ textAlign: "left" }}>
+        <Col xs={20} lg={20} style={{ textAlign: "left" }}>
         <Row
         className="whiteBackground"
         style={{
@@ -88,9 +88,9 @@ function Blog1() {
           justifyContent: "space-between",
           alignItems: "center",
         }}
-        gutter={50}
+        gutter={[50,50]}
       >
-        <Col xs={24} lg={14} style={{ textAlign: "left" }}>
+        <Col xs={20} lg={14} style={{ textAlign: "left" }}>
           <Typography.Text
             className="fontFamily1 textCenter"
             style={{ fontSize: "20px", color: "#424242", textAlign: "center" }}
@@ -98,7 +98,7 @@ function Blog1() {
            The Elite Personal Assist brand, based in Germany, sought to establish itself as a distinguished hotel service and connoisseur in a highly competitive hospitality industry.
           </Typography.Text>
         </Col>
-        <Col xs={24} lg={9} style={{ textAlign: "left" }}>
+        <Col xs={20} lg={9} style={{ textAlign: "left" }}>
      
           <Typography.Title
             className="fontFamily2"
@@ -205,7 +205,7 @@ function Blog1() {
           padding:100
         }}
       >
-        <Col xs={24} lg={12} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={12} style={{ textAlign: "center" }}>
         <Typography.Text
                   className="fontFamily1 textCenter"
                   style={{
@@ -231,10 +231,10 @@ function Blog1() {
           paddingBottom: "150px",
         }}
       >
-        <Col xs={24} lg={18} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={18} style={{ textAlign: "center" }}>
           <Row justify="space-between">
             <Col
-              xs={24}
+              xs={20}
               lg={10}
               style={{
                 textAlign: "left",
@@ -283,7 +283,7 @@ function Blog1() {
             </Col>
 
             <Col
-              xs={24}
+              xs={20}
               lg={10}
               style={{
                 textAlign: "left",
@@ -338,7 +338,7 @@ function Blog1() {
 
           <Row justify="space-between">
             <Col
-              xs={24}
+              xs={20}
               lg={10}
               style={{
                 textAlign: "left",
@@ -390,7 +390,7 @@ function Blog1() {
             </Col>
 
             <Col
-              xs={24}
+              xs={20}
               lg={10}
               style={{
                 textAlign: "left",
@@ -479,7 +479,7 @@ function Blog1() {
 
         }}
       >
-        <Col xs={24} lg={14} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={14} style={{ textAlign: "center" }}>
         <Typography.Title
             className="fontFamily2 textCenter"
             style={{
@@ -517,7 +517,7 @@ function Blog1() {
 
         }}
       >
-        <Col xs={24} lg={14} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={14} style={{ textAlign: "center" }}>
         <Typography.Title
             className="fontFamily2 textCenter"
             style={{
@@ -579,7 +579,7 @@ function Blog1() {
 
         }}
       >
-        <Col xs={24} lg={14} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={14} style={{ textAlign: "center" }}>
         <Typography.Title
             className="fontFamily2 textCenter"
             style={{
@@ -668,7 +668,7 @@ function Blog1() {
 
         }}
       >
-        <Col xs={24} lg={14} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={14} style={{ textAlign: "center" }}>
         <Typography.Title
             className="fontFamily2 textCenter"
             style={{
@@ -757,7 +757,7 @@ function Blog1() {
           paddingBottom: "150px",
         }}
       >
-        <Col xs={24} lg={14} style={{ textAlign: "center" }}>
+        <Col xs={20} lg={14} style={{ textAlign: "center" }}>
           <Typography.Title
             className="fontFamily2 textCenter"
             style={{
