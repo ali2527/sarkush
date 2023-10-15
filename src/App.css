@@ -46,6 +46,46 @@
   text-align: center!important;
 }
 
+.blogTabs .ant-tabs-nav-list{
+  padding: 5px 10px;
+  border: 1px solid #dadada;
+  border-radius: 15px;
+}
+
+.blogTabs .ant-tabs-tab{
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.blogTabs .ant-tabs-tab-active{
+ background-color: #1C2854;
+ color:white!important;
+}
+
+.blogTabs .ant-tabs-tab-active .ant-tabs-tab-btn{
+
+  color:white!important;
+ }
+
+
+ .centered-svg {
+  transition: transform 1s ease;
+  transform-origin: center;
+}
+.centered-svg2 {
+  transition: transform 1s ease;
+  transform-origin: top right;
+}
+ 
+.centered-svg.animate {
+  transform: scale(20) rotate(90deg);
+} 
+.centered-svg2.animate {
+  transform: scale(20) translate(-5%, -20%) rotate(-90deg);
+}
+
+
 .arrowButton{
   width: 70px;
   height:70px;

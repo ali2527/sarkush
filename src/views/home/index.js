@@ -5,9 +5,11 @@ import MainButton from "../../components/MainButton";
 import { Col, Row, Image, Typography, Layout, Avatar } from "antd";
 import { BsArrowRightShort, BsArrowLeft ,BsArrowRight } from "react-icons/bs";
 import { FiArrowDownRight } from "react-icons/fi";
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
   const carousel = useRef() 
+  const navigate = useNavigate()
   const items = [
     <div className="item" data-value="1">1</div>,
     <div className="item" data-value="2">2</div>,
@@ -42,7 +44,7 @@ const responsive = {
             <Typography.Title
               className="fontFamily2"
               style={{
-                fontSize: "75px",
+                fontSize: "68px",
                 color: "#222",
                 fontStyle: "normal",
                 fontWeight: 700,
@@ -59,7 +61,7 @@ const responsive = {
             <Typography.Title
               className="fontFamily2"
               style={{
-                fontSize: "75px",
+                fontSize: "68px",
                 color: "#222",
                 fontStyle: "normal",
                 fontWeight: 700,
@@ -188,7 +190,6 @@ const responsive = {
                   src="/images/feature1.png"
                 />
               </Row>
-              <br />
               <br />
               <Row>
                 <Typography.Title
@@ -596,9 +597,11 @@ const responsive = {
               style={{ display: "flex", justifyContent: "flex-end" }}
             >
               <Typography.Text
+              onClick={() => navigate("/work")}
                 className="fontFamily1 "
                 style={{
                   fontSize: "18px",
+                  cursor:'pointer',
                   color: "#424242",
                   textAlign: "right",
                 }}
@@ -639,11 +642,11 @@ const responsive = {
               </Row>
               <Row style={{ padding: "0 10px 0 10px" }}>
                 <Typography.Title
-                  className="fontFamily2 textCenter"
+                  className="fontFamily2 "
                   style={{
                     fontSize: "30px",
                     color: "black",
-                    textAlign: "center",
+                  
                   }}
                 >
                   UI/UX Case study: Unwind - Mindfulness App
@@ -692,7 +695,7 @@ const responsive = {
               </Row>
               <Row style={{ padding: "0 10px 0 10px" }}>
                 <Typography.Title
-                  className="fontFamily2 textCenter"
+                  className="fontFamily2 "
                   style={{
                     fontSize: "30px",
                     color: "black",

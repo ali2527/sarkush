@@ -104,7 +104,7 @@ const ClientHeader = () => {
               style={{ textAlign: "right" }}
               className="site-header-logo"
             >
-            <MainButton className='fontFamily1' style={{background:"#1C2854", border:'none', borderRadius:"100px",padding:"14px 35px",height:"auto", fontSize:"16px"}} size="large">
+            <MainButton onClick={() => navigate("/connect-with-us")} className='fontFamily1' style={{background:"#1C2854", border:'none', borderRadius:"100px",padding:"14px 35px",height:"auto", fontSize:"16px"}} size="large">
               Connect with us
             </MainButton>
             

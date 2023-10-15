@@ -1,99 +1,163 @@
-import React from "react";
+import React, { useRef } from "react";
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
+import MainButton from "../../components/MainButton";
+import { Col, Row, Image, Typography, Layout, Avatar } from "antd";
+import { BsArrowRightShort, BsArrowLeft, BsArrowRight } from "react-icons/bs";
+import { FiArrowDownRight } from "react-icons/fi";
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
-import { Col, Row, Typography, Layout, Card } from "antd";
+function ContactUs() {
+  const carousel = useRef();
+  const items = [
+    <div className="item" data-value="1">
+      1
+    </div>,
+    <div className="item" data-value="2">
+      2
+    </div>,
+    <div className="item" data-value="3">
+      3
+    </div>,
+    <div className="item" data-value="4">
+      4
+    </div>,
+    <div className="item" data-value="5">
+      5
+    </div>,
+  ];
 
-function AboutUs() {
+  const responsive = {
+    0: { items: 1 },
+    568: { items: 2 },
+    1024: { items: 2 },
+  };
+
   return (
     <Layout style={{ minHeight: "100vh" }}>
       <Row
-        className="blueBackground"
+        className="hero"
         style={{
-          height: "45vh",
+          height: "100vh",
+          background:'white',
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          position: "relative",
+          textAlign: "left",
         }}
       >
-        <Typography.Title
-          className="fontFamily1"
-          style={{ fontSize: "30px", color: "white" }}
-        >
-          {<> About Us</>}
-        </Typography.Title>
-      </Row>
-
-      {/* section 2 */}
-      <Row
-        className="whiteBackground"
-        style={{ backgroundColor: "white", justifyContent: "center" }}
-      >
-        <Col xs={24} md={16}>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              flexDirection: "column",
-
-              padding: "50px 20px",
-            }}
-          >
-            <Card
-              className="infoBox"
-              bordered={false}
+        <Col xs={24} lg={20} style={{display:'flex',flexDirection:'column',justifyContent:'space-around',height:'100%'}}>
+          <div>
+          <Row style={{ textAlign: "center" }}>
+            <Typography.Title
+              className="fontFamily2 textCenter"
               style={{
-                width: "100%",
-                padding: "20px",
+                fontSize: "56px",
+                color: "#222",
+                fontStyle: "normal",
+                fontWeight: 700,
+                lineHeight: "68px",
+                marginBottom: 5,
+                zIndex: 2,
+                marginTop: 0,
               }}
             >
-              <Typography.Title
-                className="fontFamily1"
-                style={{
-                  fontSize: "35px",
-                  fontWeight: 600,
-                  color: "black",
-                  textAlign: "left",
-                  marginTop: 0,
-                }}
-              >
-                {
-                  <>
-                    We are Turitor.
-                    <br /> An online learning community
-                  </>
-                }
-              </Typography.Title>
-              <Typography.Text
-                className="fontFamily1"
-                style={{ fontSize: "16px", color: "grey", textAlign: "left" }}
-              >
-                {
-                  <>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged. It was popularised in the 1960s with
-                    the release of Letraset sheets containing.
-                  </>
-                }
-              </Typography.Text>
-              <br /> <br />
-              <Card
-                className="aboutCard1"
-                bordered={false}
-                style={{
-                  width: "100%",
-                  height: "350px",
-                }}
-              ></Card>
-            </Card>
+            Please drop us a line
+            </Typography.Title>
+          </Row>
+
+          <Row>
+            <Typography.Text
+              className="fontFamily1 textCenter"
+              style={{
+                fontSize: "22px",
+                color: "#424242",
+                textAlign: "left",
+
+                zIndex: 2,
+                marginTop: 0,
+              }}
+            >
+              We are here to listen to you. Tell us what you need, we will be pleased to assist  you!
+            </Typography.Text>
+          </Row>
           </div>
+
+
+          <div>
+          <Row style={{ textAlign: "center" }}>
+            <Typography.Title
+              className="fontFamily2 textCenter"
+              style={{
+                fontSize: "56px",
+                color: "#222",
+                fontStyle: "normal",
+                fontWeight: 600,
+                lineHeight: "68px",
+                marginBottom: 10,
+                zIndex: 2,
+                marginTop: 0,
+                textDecoration:'underline'
+              }}
+            >
+           letsconnect@surkush.com
+            </Typography.Title>
+          </Row>
+          <br/>
+
+          <Row>
+            <Typography.Text
+              className="fontFamily1"
+              style={{
+                fontSize: "26px",
+                color: "#424242",
+                textAlign: "left",
+
+                zIndex: 2,
+                marginTop: 0,
+              }}
+            >
+             3166 Massachusetts Avenue, <br/>Washington DC
+            </Typography.Text>
+          </Row>
+
+          <br/>
+
+<Row>
+  <Typography.Text
+    className="fontFamily1"
+    style={{
+      fontSize: "26px",
+      color: "#424242",
+      textAlign: "left",
+
+      zIndex: 2,
+      marginTop: 0,
+    }}
+  >
+   Tél : +33 (0) 1 46 27 22 35
+  </Typography.Text>
+</Row>
+
+
+<br/>
+
+<br/>
+          <br/>
+
+<br/>
+          </div>
+
+          
         </Col>
+
+
+
       </Row>
+
     </Layout>
   );
 }
 
-export default AboutUs;
+export default ContactUs;
