@@ -379,7 +379,7 @@ const ClientFooter = () => {
           </Row>
         </Col>
       </Row>
-    </Footer>
+    </Footer> 
   );
 };
 

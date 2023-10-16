@@ -7,12 +7,12 @@ import MainButton from "../../components/MainButton"
 import "../../App.css"
 const { Header } = Layout;
 
-const ClientHeader = () => {
+const ClientHeader = ({isScroll}) => {
   const navigate = useNavigate()
   const [logoutModal, setLogoutModal] = useState(false);
   const [visible, setVisible] = useState(false);
 
-
+console.log(isScroll)
 
 
 
@@ -23,8 +23,11 @@ const ClientHeader = () => {
         boxShadow:"0px 8px 9px 0px rgba(0, 0, 0, 0.05)",
         zIndex:20,
         padding: "20px",
-        background: "white",
+        background: isScroll ? "rgba(255, 255, 255, 0.9)" : "white",
         scrollBehavior: "smooth",
+        position:'fixed',
+        width:"100%",
+       
       }}
     >
       <Row

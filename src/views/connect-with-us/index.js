@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef,useEffect } from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import MainButton from "../../components/MainButton";
@@ -8,8 +8,17 @@ import { FiArrowDownRight } from "react-icons/fi";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import { useNavigate } from "react-router-dom";
 import Marquee from "react-fast-marquee";
+import AOS from 'aos';
+import 'aos/dist/aos.css'
+
 
 function ConnectWithUs() {
+
+  useEffect(() => {
+    AOS.init({disable: 'mobile',mirror:true});
+    AOS.refresh();
+  }, []);
+  
   const navigate = useNavigate();
   const carousel = useRef();
 
@@ -97,6 +106,8 @@ function ConnectWithUs() {
           <br />
           <Row style={{ textAlign: "center", justifyContent: "center" }}>
             <Col xs={24} lg={6}>
+            <div data-aos="flip-right">
+
               <div
                 style={{
                   background: "#EAF4FF",
@@ -144,9 +155,11 @@ function ConnectWithUs() {
                   </MainButton>
                 </Row>
               </div>
+              </div>
             </Col>
 
             <Col xs={24} lg={6}>
+            <div data-aos="flip-right" data-aos-delay="300">
               <div
                 style={{
                   background: "#023A7B",
@@ -196,9 +209,11 @@ function ConnectWithUs() {
                   </MainButton>
                 </Row>
               </div>
+              </div>
             </Col>
 
             <Col xs={24} lg={6}>
+            <div data-aos="flip-right" data-aos-delay="600">
               <div
                 style={{
                   background: "#EAF4FF",
@@ -247,9 +262,11 @@ function ConnectWithUs() {
                   </MainButton>
                 </Row>
               </div>
+              </div>
             </Col>
 
             <Col xs={24} lg={6}>
+            <div data-aos="flip-right" data-aos-delay="900">
               <div
                 style={{
                   background: "#023A7B",
@@ -298,6 +315,7 @@ function ConnectWithUs() {
                   </MainButton>
                 </Row>
               </div>
+              </div>
             </Col>
           </Row>
         </Col>
@@ -315,6 +333,7 @@ function ConnectWithUs() {
         }}
       >
         <Col xs={20} lg={12} style={{ textAlign: "center" }}>
+        <div data-aos="fade-up">
           <Typography.Title
             className="fontFamily2 textCenter"
             style={{
@@ -326,6 +345,7 @@ function ConnectWithUs() {
           >
             Advising on todays and tomorrow’s startups
           </Typography.Title>
+          </div>
           <br />
           <Typography.Text
             className="fontFamily1 textCenter"
@@ -366,12 +386,14 @@ function ConnectWithUs() {
               }}
             >
               <Row>
+              <div data-aos="fade-up">
                 <Image
                   preview={false}
                   alt={"Failed to load image"}
                   width={120}
                   src="/images/feature1.png"
                 />
+                </div>
               </Row>
               <br />
 
@@ -595,12 +617,14 @@ function ConnectWithUs() {
               }}
             >
               <Row>
+              <div data-aos="fade-up" data-aos-delay="200">
                 <Image
                   preview={false}
                   alt={"Failed to load image"}
                   width={100}
                   src="/images/feature2.png"
                 />
+                </div>
               </Row>
               <br />
 
@@ -811,12 +835,14 @@ function ConnectWithUs() {
               }}
             >
               <Row>
+              <div data-aos="fade-up" >
                 <Image
                   preview={false}
                   alt={"Failed to load image"}
                   width={120}
                   src="/images/feature3.png"
                 />
+                </div>
               </Row>
               <br />
 
@@ -884,6 +910,7 @@ function ConnectWithUs() {
               }}
             >
               <Row>
+              <div data-aos="fade-up" data-aos-delay="200">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   height="100"
@@ -899,6 +926,7 @@ function ConnectWithUs() {
                     fill="#1C2854"
                   />
                 </svg>
+                </div>
               </Row>
               <br />
 
@@ -1132,7 +1160,7 @@ function ConnectWithUs() {
       >
         <Col xs={20} lg={20} style={{ textAlign: "center" }}>
           <Row justify={"center"}>
-           
+          <div data-aos="fade-up" data-aos-delay="200">
               <Typography.Title
                 className="fontFamily2 textCenter"
                 style={{
@@ -1147,6 +1175,7 @@ function ConnectWithUs() {
               >
                 How We Became the Talk of Town
               </Typography.Title>
+              </div>
               </Row> <Row justify={"center"}>
               <Typography.Text
               className="fontFamily1 "
@@ -1165,30 +1194,19 @@ function ConnectWithUs() {
           <br />
   
           <Row gutter={0} justify={"center"}>
-          {/* <Col xs={24} lg={3} style={{display:'flex',alignItems:'flex-start', justifyContent:'center',flexDirection:'column'}}>
-              
-              <Row style={{ padding: "20px 10px 0 10px" }}>
-                <div className="arrowButton"  onClick={(e) => carousel?.current?.slideNext(e)}>
-                <BsArrowRight />
-                </div>
-             
-              </Row>
-              <Row style={{ padding: "0 10px 0 10px" }}>
-              <div className="arrowButton" onClick={(e) => carousel?.current?.slidePrev(e)}>
-                <BsArrowLeft/>
-                </div>
-              </Row>
-             
-            </Col> */}
+
             <Col xs={24} lg={18}>
             <AliceCarousel
-      key="carousel"
-      mouseTracking
-      
-      disableButtonsControls
-      responsive={responsive}
-      items={items}
-      ref={carousel}
+  key="carousel"
+  mouseTracking
+  autoPlay
+  autoPlayInterval={1000}
+  animationDuration={1000}
+  infinite
+  disableButtonsControls
+  responsive={responsive}
+  items={items}
+  ref={carousel}
     >
        {items.map((subItem, subIndex) => {
                   return (
@@ -1281,6 +1299,8 @@ function ConnectWithUs() {
         }}
       >
         <Col xs={24} lg={14} style={{ textAlign: "center" }}>
+        <div data-aos="zoom-in-up">
+
           <Typography.Title
             className="fontFamily2 textCenter"
             style={{
@@ -1292,6 +1312,7 @@ function ConnectWithUs() {
           >
             Join Our Exclusive Waitlist and Be Part of Something Special!
           </Typography.Title>
+          </div>
           <br />
           <Typography.Text
             className="fontFamily1 textCenter"

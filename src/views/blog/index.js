@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef,useEffect } from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import MainButton from "../../components/MainButton";
@@ -15,8 +15,18 @@ import {
 import { IoIosArrowForward } from "react-icons/io";
 import { FiArrowDownRight } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css'
+
 
 function Blogs() {
+
+  useEffect(() => {
+    AOS.init({disable: 'mobile',mirror:true});
+    AOS.refresh();
+  }, []);
+
+
   const navigate = useNavigate()
   const onChange = (key) => {
     console.log(key);
@@ -65,7 +75,8 @@ function Blogs() {
           paddingTop: "100px",
         }}
       >
-        <Col xs={20} lg={18}>
+        <Col xs={20} lg={12}>
+        <div data-aos="zoom-in" data-aos-easing="ease-in-sine">
           <Row
             style={{
               display: "flex",
@@ -90,6 +101,13 @@ function Blogs() {
             </Typography.Title>
           </Row>
           <br />
+          <Row
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              textAlign: "center",
+            }}
+          >
           <Typography.Text
             className="fontFamily1 textCenter"
             style={{
@@ -104,6 +122,8 @@ function Blogs() {
             updated with the latest strategies, gain fresh perspectives, and
             fuel your entrepreneurial journey with our curated content.
           </Typography.Text>
+          </Row>
+          </div>
         </Col>
       </Row>
 
@@ -156,8 +176,10 @@ function Blogs() {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "flex-start",
+                background:"#f5fcff"
               }}
             >
+              <div data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="200">
               <Image
                 preview={false}
                 alt={"Failed to load image"}
@@ -166,6 +188,7 @@ function Blogs() {
                 style={{ objectFit: "cover" }}
                 src="/images/blog0.png"
               />
+              </div>
             </Col>
             <Col
               xs={24}

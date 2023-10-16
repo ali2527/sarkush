@@ -1,37 +1,19 @@
-import React, { useRef } from "react";
+import React, { useRef,useEffect } from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import MainButton from "../../components/MainButton";
 import { Col, Row, Image, Typography, Layout, Avatar } from "antd";
-import { BsArrowRightShort, BsArrowLeft, BsArrowRight } from "react-icons/bs";
-import { FiArrowDownRight } from "react-icons/fi";
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import AOS from 'aos';
+import 'aos/dist/aos.css'
+
+
 
 function AboutUs() {
-  const carousel = useRef();
-  const items = [
-    <div className="item" data-value="1">
-      1
-    </div>,
-    <div className="item" data-value="2">
-      2
-    </div>,
-    <div className="item" data-value="3">
-      3
-    </div>,
-    <div className="item" data-value="4">
-      4
-    </div>,
-    <div className="item" data-value="5">
-      5
-    </div>,
-  ];
 
-  const responsive = {
-    0: { items: 1 },
-    568: { items: 2 },
-    1024: { items: 2 },
-  };
+  useEffect(() => {
+    AOS.init({disable: 'mobile',mirror:true});
+    AOS.refresh();
+  }, []);
 
   return (
     <Layout style={{ minHeight: "100vh" }}>
@@ -50,6 +32,7 @@ function AboutUs() {
       >
         <Col xs={20} lg={12}>
           <Row style={{ textAlign: "center", justifyContent: "center" }}>
+          <div data-aos="zoom-in" data-aos-easing="ease-in-sine">
             <Typography.Title
               className="fontFamily2 textCenter"
               style={{
@@ -66,6 +49,7 @@ function AboutUs() {
             >
               Here’s Who We Are
             </Typography.Title>
+            </div>
           </Row>
 
           <br />
@@ -147,6 +131,7 @@ function AboutUs() {
         }}
       >
         <Col xs={20} lg={12} style={{ textAlign: "center" }}>
+        <div data-aos="zoom-in" data-aos-easing="ease-in-out">
           <Typography.Title
             className="fontFamily2 textCenter"
             style={{
@@ -170,6 +155,7 @@ function AboutUs() {
             user-friendly, accessible, and constantly evolving to meet the needs
             of entrepreneurs.
           </Typography.Text>
+          </div>
         </Col>
       </Row>
 
@@ -185,6 +171,7 @@ function AboutUs() {
         }}
       >
         <Col xs={20} lg={12} style={{ textAlign: "center" }}>
+        <div data-aos="zoom-in" data-aos-easing="ease-in-out">
           <Typography.Title
             className="fontFamily2 textCenter"
             style={{
@@ -206,6 +193,7 @@ function AboutUs() {
             serves as a powerhouse for every business,thrives on pushing
             boundaries and thinks outside the box.
           </Typography.Text>
+          </div>
         </Col>
       </Row>
 
@@ -221,6 +209,7 @@ function AboutUs() {
       >
         <Col xs={24} lg={18} style={{ textAlign: "left" }}>
           <div style={{ padding: "20px" }}>
+          <div data-aos="fade-up" data-aos-delay="600" data-aos-easing="ease-in-out">
             <Row
               style={{
                 background: "#EAF4FF",
@@ -283,7 +272,8 @@ function AboutUs() {
                 </Typography.Text>
               </Col>
             </Row>
-
+            </div>
+            <div data-aos="fade-up" data-aos-delay="600" data-aos-easing="ease-in-out">
             <Row
               style={{
                 background: "#9FCCFF",
@@ -342,7 +332,8 @@ function AboutUs() {
                 </Typography.Text>
               </Col>
             </Row>
-
+            </div>
+            <div data-aos="fade-up" data-aos-delay="600" data-aos-easing="ease-in-out">
             <Row
               style={{
                 background: "#C0DDFF",
@@ -411,6 +402,7 @@ function AboutUs() {
                 </Typography.Text>
               </Col>
             </Row>
+            </div>
           </div>
         </Col>
       </Row>
@@ -435,6 +427,7 @@ function AboutUs() {
 </svg>
         </div>
         <Col xs={20} lg={12} style={{ textAlign: "center" }}>
+        <div data-aos="zoom-in" data-aos-easing="ease-in-out">
           <Typography.Title
             className="fontFamily2 textCenter"
             style={{
@@ -456,6 +449,7 @@ function AboutUs() {
             valuable resources, collaborative opportunities, and a supportive
             ecosystem, we fuel the growth and success of our members.
           </Typography.Text>
+          </div>
         </Col>
       </Row>
 
@@ -500,6 +494,7 @@ function AboutUs() {
                   alignItems: "center",
                 }}
               >
+                <div data-aos="zoom-in" data-aos-easing="ease-in-out">
                 <Row>
                   <Typography.Title
                     className="fontFamily2 textCenter"
@@ -526,6 +521,7 @@ function AboutUs() {
                     & Solve
                   </Typography.Text>
                 </Row>
+                </div>
                 
                 
               
@@ -542,6 +538,7 @@ function AboutUs() {
                   alignItems: "center",
                 }}
               >
+                <div data-aos="zoom-in" data-aos-easing="ease-in-out" data-aos-delay="200" >
                 <Row>
                   <Typography.Title
                     className="fontFamily2 textCenter"
@@ -568,6 +565,7 @@ function AboutUs() {
                     & Build
                   </Typography.Text>
                 </Row>
+                </div>
   
               </Col>
 
@@ -582,6 +580,7 @@ function AboutUs() {
                   alignItems: "center",
                 }}
               >
+                   <div data-aos="zoom-in" data-aos-easing="ease-in-out" data-aos-delay="400" >
                 <Row>
                   <Typography.Title
                     className="fontFamily2 textCenter"
@@ -608,6 +607,7 @@ function AboutUs() {
                     & Test
                   </Typography.Text>
                 </Row>
+                </div>
 
               </Col>
 
@@ -622,6 +622,7 @@ function AboutUs() {
                   alignItems: "center",
                 }}
               >
+                <div data-aos="zoom-in" data-aos-easing="ease-in-out" data-aos-delay="600" >
                 <Row>
                   <Typography.Title
                     className="fontFamily2 textCenter"
@@ -648,6 +649,7 @@ function AboutUs() {
                     Iterate
                   </Typography.Text>
                 </Row>
+                </div>
               </Col>
             </Row>
             <Row justify="space-between" style={{padding:"50px"}}>

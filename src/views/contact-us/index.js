@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef,useEffect } from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import MainButton from "../../components/MainButton";
@@ -6,33 +6,17 @@ import { Col, Row, Image, Typography, Layout, Avatar } from "antd";
 import { BsArrowRightShort, BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { FiArrowDownRight } from "react-icons/fi";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import AOS from 'aos';
+import 'aos/dist/aos.css'
+
 
 function ContactUs() {
-  const carousel = useRef();
-  const items = [
-    <div className="item" data-value="1">
-      1
-    </div>,
-    <div className="item" data-value="2">
-      2
-    </div>,
-    <div className="item" data-value="3">
-      3
-    </div>,
-    <div className="item" data-value="4">
-      4
-    </div>,
-    <div className="item" data-value="5">
-      5
-    </div>,
-  ];
 
-  const responsive = {
-    0: { items: 1 },
-    568: { items: 2 },
-    1024: { items: 2 },
-  };
-
+  useEffect(() => {
+    AOS.init({disable: 'mobile',mirror:true});
+    AOS.refresh();
+  }, []);
+  
   return (
     <Layout style={{ minHeight: "100vh" }}>
       <Row
@@ -51,6 +35,7 @@ function ContactUs() {
         <Col xs={20} lg={20} style={{display:'flex',flexDirection:'column',justifyContent:'space-between',height:'100%'}}>
           <div>
           <Row style={{ textAlign: "left" }}>
+          <div data-aos="zoom-in-right" data-aos-easing="ease-in-sine">
             <Typography.Title
               className="fontFamily2 "
               style={{
@@ -66,6 +51,7 @@ function ContactUs() {
             >
             Please drop us a line
             </Typography.Title>
+            </div>
           </Row>
 
           <Row>
@@ -91,6 +77,7 @@ function ContactUs() {
        
           <div>
           <Row style={{ textAlign: "left" }}>
+          <div data-aos="zoom-in-right" data-aos-easing="ease-in-sine" data-aos-delay="300" >
             <Typography.Title
               className="fontFamily2"
               style={{
@@ -107,9 +94,11 @@ function ContactUs() {
             >
            letsconnect@surkush.com
             </Typography.Title>
+            </div>
           </Row>
 
 
+          <div data-aos="zoom-in-right" data-aos-easing="ease-in-sine" data-aos-delay="500" >
           <Row>
             <Typography.Text
               className="fontFamily1"
@@ -151,6 +140,7 @@ function ContactUs() {
    Tél : (720) 734-7017
   </Typography.Text>
 </Row>
+</div>
 
 
 <br/>

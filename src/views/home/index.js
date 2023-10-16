@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef,useEffect } from 'react';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import MainButton from "../../components/MainButton";
@@ -6,8 +6,18 @@ import { Col, Row, Image, Typography, Layout, Avatar } from "antd";
 import { BsArrowRightShort, BsArrowLeft ,BsArrowRight } from "react-icons/bs";
 import { FiArrowDownRight } from "react-icons/fi";
 import { useNavigate } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css'
+
 
 function Home() {
+  
+  useEffect(() => {
+    AOS.init({disable: 'mobile',mirror:true});
+    AOS.refresh();
+  }, []);
+
+  
   const carousel = useRef() 
   const navigate = useNavigate()
   const items = [
@@ -77,7 +87,9 @@ const responsive = {
       >
         <Col xs={20} lg={12}>
           <Row>
-            <Typography.Title
+          <div style={{zIndex: 2}} data-aos="fade-right"
+     >
+          <Typography.Title
               className="fontFamily2"
               style={{
                 fontSize:  window.innerWidth < 800 ? "35px" : "65px",
@@ -93,8 +105,13 @@ const responsive = {
             >
               In the World of Cannots
             </Typography.Title>
+          </div>
+          
           </Row>
           <Row>
+          <div style={{zIndex: 2}} data-aos="fade-right"
+         data-aos-delay="500" data-aos-easing="ease-in-sine">
+
             <Typography.Title
               className="fontFamily2"
               style={{
@@ -110,6 +127,7 @@ const responsive = {
             >
               We Are the Why-Nots
             </Typography.Title>
+            </div>
           </Row>
           <br />
           <br />
@@ -156,13 +174,18 @@ const responsive = {
           </MainButton>
         </Col>
         <Col xs={0} lg={8} />
+        
+
         <div style={{ position: "absolute", right: 0, bottom: window.innerWidth < 800 ? 150 : 0, zIndex: 0, }}>
+        <div data-aos="fade-left"
+         data-aos-delay="800">
           <Image
             preview={false}
             alt={"Failed to load image"}
             height={ window.innerWidth < 800 ? 350 : 700}
             src="/images/objects.png"
           />
+        </div>
         </div>
       </Row>
 
@@ -220,12 +243,14 @@ const responsive = {
               }}
             >
               <Row>
+              <div data-aos-mirror='true'  data-aos="fade-up" >
                 <Image
                   preview={false}
                   alt={"Failed to load image"}
                   width={120}
                   src="/images/feature1.png"
                 />
+                </div>
               </Row>
               <br />
               <Row>
@@ -266,12 +291,14 @@ const responsive = {
               }}
             >
               <Row>
+              <div data-aos-mirror='true'  data-aos="fade-up" data-aos-delay="200" >
                 <Image
                   preview={false}
                   alt={"Failed to load image"}
                   width={100}
                   src="/images/feature2.png"
                 />
+                </div>
               </Row>
               <br />
               <br />
@@ -313,12 +340,14 @@ const responsive = {
               }}
             >
               <Row>
+              <div data-aos-mirror='true'  data-aos="fade-up" data-aos-delay="400" >
                 <Image
                   preview={false}
                   alt={"Failed to load image"}
                   width={100}
                   src="/images/feature3.png"
                 />
+                </div>
               </Row>
               <br />
               <br />
@@ -445,6 +474,7 @@ const responsive = {
           <br />
           <br />
           <Row justify="space-between" gutter={[20,50]}>
+          
             <Col
               xs={24}
               lg={10}
@@ -457,6 +487,8 @@ const responsive = {
                 borderTop: "3px solid #dadada",
               }}
             >
+              <div data-aos-mirror='true'  data-aos="fade-right" data-aos-easing="ease-in-out" data-aos-duration="1000"
+ >
               <Row>
                 <Typography.Title
                   className="fontFamily2 textCenter"
@@ -487,7 +519,9 @@ const responsive = {
                   their business ventures.
                 </Typography.Text>
               </Row>
+              </div>
             </Col>
+      
             <Col
               xs={24}
               lg={10}
@@ -500,6 +534,8 @@ const responsive = {
                 borderTop: "3px solid #dadada",
               }}
             >
+                            <div data-aos-mirror='true'  data-aos="fade-left" data-aos-easing="ease-in-out" data-aos-duration="1000"
+ >
               <Row>
                 <Typography.Title
                   className="fontFamily2 textCenter"
@@ -529,6 +565,7 @@ const responsive = {
                   as they pursue their entrepreneurial ambitions. 
                 </Typography.Text>
               </Row>
+              </div>
             </Col>
           </Row>
         </Col>
@@ -614,6 +651,7 @@ const responsive = {
         <Col xs={20} lg={20} style={{ textAlign: "left" }}>
           <Row>
             <Col xs={24} lg={12}>
+          
               <Typography.Title
                 className="fontFamily1 "
                 style={{
@@ -627,6 +665,7 @@ const responsive = {
               >
                 Case Studies <FiArrowDownRight />
               </Typography.Title>
+             
             </Col>
             <Col
               xs={24}
@@ -653,6 +692,7 @@ const responsive = {
                       top: 0,
                       behavior: "smooth", // You can use 'auto' for instant scrolling
                     }); navigate("/blog/1")}}>
+                        <div data-aos-mirror='true'  data-aos="fade-right" data-aos-easing="ease-in-out">
               <Row>
                 <Image
                   preview={false}
@@ -704,11 +744,13 @@ const responsive = {
                   #Health &nbsp; #Tech
                 </Typography.Text>
               </Row>
+              </div>
             </Col>
             <Col xs={24} lg={12} onClick={() => { window.scrollTo({
                       top: 0,
                       behavior: "smooth", // You can use 'auto' for instant scrolling
                     }); navigate("/blog/5")}}>
+                       <div data-aos-mirror='true'  data-aos="fade-left" data-aos-easing="ease-in-out" >
               <Row>
                 <Image
                   preview={false}
@@ -760,6 +802,7 @@ const responsive = {
                   #Fitness &nbsp; #Branding &nbsp; #Health
                 </Typography.Text>
               </Row>
+              </div>
             </Col>
           </Row>
         </Col>
@@ -830,7 +873,10 @@ const responsive = {
             <AliceCarousel
       key="carousel"
       mouseTracking
-      
+      autoPlay
+      autoPlayInterval={1000}
+      animationDuration={1000}
+      infinite
       disableButtonsControls
       responsive={responsive}
       items={items}

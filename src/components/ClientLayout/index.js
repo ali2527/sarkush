@@ -10,6 +10,8 @@ import { SITE_NAME } from '../../constants';
 const ClientLayout = ({ children, head, footer= true }) => {
     const [loading,setLoading] = useState(true);
     const [animationClass, setAnimationClass] = useState('');
+    const [scrollY, setScrollY] = useState(0);
+
 
     useEffect(() => {
         setTimeout(() =>{
@@ -22,7 +24,19 @@ const ClientLayout = ({ children, head, footer= true }) => {
           setLoading(false)
       },1000)
   
+      const handleScroll = () => {
+        setScrollY(window.scrollY);
+      };
+  
+      // Attach the event listener when the component mounts
+      window.addEventListener('scroll', handleScroll);
+  
+      // Clean up the event listener when the component unmounts
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
     }, [])
+
 
 
     let title = head?.title ? head?.title : ""
@@ -47,14 +61,10 @@ const ClientLayout = ({ children, head, footer= true }) => {
     }else{
         return (
             <Layout style={{ backgroundColor: "#fff", scrollBehavior: "smooth", position:'relative' }}>
-                {/* <Head>
-                    <title>{title}</title>
-                    <meta name="description" content={head?.description} />
-                    <meta name="robots" content="noindex, nofollow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-                    <link rel="icon" href="/favicon.ico" />
-                </Head> */}
-                <ClientHeader />
+                <ClientHeader isScroll={scrollY > 100 ? true : false}  />
+                <span style={{marginTop:"100px"}}>
                 {children}
+                </span>
               {footer && <ClientFooter />}
     
                
